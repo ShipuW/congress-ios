@@ -7,6 +7,9 @@ target 'congress' do
 
   # Pods for congress
 
+  pod 'JSONModel'
+  pod 'RESideMenu', '~> 4.0.7'
+  
   target 'congressTests' do
     inherit! :search_paths
     # Pods for testing

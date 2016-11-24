@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "BaseModel.h"
 
-@interface BaseModel : BaseModel
+@interface BaseModel : NSObject
 
 @end
