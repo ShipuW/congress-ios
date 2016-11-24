@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "LeftMenuTableViewController.h"
+#import "LegislatorViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    
+
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    
+    LegislatorViewController* legislatorViewController = [storyboard instantiateViewControllerWithIdentifier:@"LegislatorViewController"];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:legislatorViewController];
+    LeftMenuTableViewController* leftMenuTableViewController = [storyboard instantiateViewControllerWithIdentifier:@"LeftMenuTableViewController"];
+
+    RESideMenu *sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:navigationController
+                                                                    leftMenuViewController:leftMenuTableViewController
+                                                                   rightMenuViewController:nil];
+    
+    self.window.rootViewController = sideMenuViewController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

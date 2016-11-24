@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BillTableViewController : UITableViewController
+@interface BillTableViewController : BaseTableViewController
 
 @end

@@ -11,4 +11,11 @@
 
 @interface BaseModel : NSObject
 
+@property(nonatomic, strong) NSString    *ID;
+@property(nonatomic, strong) NSString    *chamber;
+
++ (instancetype)infoFromDict:(NSDictionary *)dict;
++ (NSArray *)arrayFromDict:(NSDictionary *)dict;
++ (NSArray *)arrayFromArray:(NSArray *)array;
+
 @end

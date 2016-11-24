@@ -11,4 +11,13 @@
 
 @interface BillModel : BaseModel
 
+@property(nonatomic, strong) NSString    *officialTitle;
+@property(nonatomic, strong) NSString    *type;
+@property(nonatomic, strong) NSString    *sponsor;
+@property(nonatomic, strong) NSString    *lastActionDate;
+@property(nonatomic, strong) NSString    *pdfUrl;
+@property(nonatomic, strong) NSString    *lastVoteDate;
+@property(nonatomic, strong) NSString    *status;
+
+
 @end

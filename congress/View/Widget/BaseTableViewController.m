@@ -1,19 +1,18 @@
 //
-//  LeftMenuTableViewController.m
+//  BaseTableViewController.m
 //  congress
 //
 //  Created by 王士溥 on 11/24/16.
 //  Copyright © 2016 shipu. All rights reserved.
 //
 
-#import "LeftMenuTableViewController.h"
-#import "LeftMenuTableViewCell.h"
+#import "BaseTableViewController.h"
 
-@interface LeftMenuTableViewController ()
+@interface BaseTableViewController ()
 
 @end
 
-@implementation LeftMenuTableViewController
+@implementation BaseTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,53 +32,25 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+#warning Incomplete implementation, return the number of sections
+    return 0;
 }
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+#warning Incomplete implementation, return the number of rows
+    return 0;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"leftMenuCell"];
-
-    UILabel * sectionName = [[UILabel alloc]initWithFrame:cell.contentView.frame];
-    [cell.contentView addSubview:sectionName];
-    sectionName.text = [self getSectionNameForRow:indexPath.row];
-
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    // Configure the cell...
     
     return cell;
 }
+*/
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
-}
-
-
-- (NSString*)getSectionNameForRow:(NSInteger)row{
-    switch (row) {
-        case 0:
-            return @"Legislators";
-            break;
-        case 1:
-            return @"Bills";
-            break;
-        case 2:
-            return @"Committees";
-            break;
-        case 3:
-            return @"Favorite";
-            break;
-        case 4:
-            return @"About";
-            break;
-        default:
-            return @"";
-            break;
-    }
-}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LegislatorTableViewCell : UITableViewCell
+@interface LegislatorTableViewCell : BaseTableViewCell
 
 @end

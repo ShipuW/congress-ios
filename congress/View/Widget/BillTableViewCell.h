@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BillTableViewCell : UITableViewCell
+@interface BillTableViewCell : BaseTableViewCell
 
 @end

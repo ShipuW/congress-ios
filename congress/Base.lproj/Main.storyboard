@@ -28,7 +28,7 @@
         <!--Left Menu Table View Controller-->
         <scene sceneID="mRr-bS-ayt">
             <objects>
-                <tableViewController id="Bdj-bf-zhc" customClass="LeftMenuTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LeftMenuTableViewController" id="Bdj-bf-zhc" customClass="LeftMenuTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Owq-MC-op6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,7 +56,7 @@
         <!--Base View Controller-->
         <scene sceneID="Dcy-Zx-tAq">
             <objects>
-                <viewController id="ycO-0S-By4" customClass="BaseViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BaseViewController" id="ycO-0S-By4" customClass="BaseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x2V-EY-3ST"/>
                         <viewControllerLayoutGuide type="bottom" id="4gv-PP-E7t"/>
@@ -91,7 +91,7 @@
         <!--Legislator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LegislatorViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LegislatorViewController" id="BYZ-38-t0r" customClass="LegislatorViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>

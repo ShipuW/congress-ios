@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CommitteeTableViewController : UITableViewController
+@interface CommitteeTableViewController : BaseTableViewController
 
 @end

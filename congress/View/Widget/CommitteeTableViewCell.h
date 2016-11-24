@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CommitteeTableViewCell : UITableViewCell
+@interface CommitteeTableViewCell : BaseTableViewCell
 
 @end

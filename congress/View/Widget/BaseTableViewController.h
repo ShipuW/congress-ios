@@ -1,5 +1,5 @@
 //
-//  LeftMenuTableViewController.h
+//  BaseTableViewController.h
 //  congress
 //
 //  Created by 王士溥 on 11/24/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LeftMenuTableViewController : BaseTableViewController
+@interface BaseTableViewController : UITableViewController
 
 @end
