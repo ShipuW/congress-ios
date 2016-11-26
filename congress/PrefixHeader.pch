@@ -10,12 +10,30 @@
 #define PrefixHeader_pch
 
 
-#import <RESideMenu/RESideMenu.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+
+
 #import "Constant.h"
+
+#import "ImageDownload.h"
+
 #import "BaseModel.h"
-#import "BaseTableViewCell.h"
+#import "CategoryModel.h"
+#import "BaseOperation.h"
+
+#import "BaseController.h"
+
 #import "BaseViewController.h"
+#import "BaseWidgetController.h"
 #import "BaseTableViewController.h"
+
+
+
+#import "BaseTableViewCell.h"
+
+#import "SlideMenuController.h"
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

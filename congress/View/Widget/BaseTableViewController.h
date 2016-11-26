@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseTableViewController : UITableViewController
+@interface BaseTableViewController : BaseWidgetController{
+    IBOutlet UITableView    *_tableView;
+    CGFloat                 _cellHeight;
+}
+
+@property(nonatomic, strong) NSString   *cellIdentifier;
+@property(nonatomic, assign) id         owner;
+
+
 
 @end

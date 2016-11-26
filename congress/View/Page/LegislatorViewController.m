@@ -15,23 +15,34 @@
 @implementation LegislatorViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    self.title = _categoryInfo.name;
+    self.navigationItem.title = _categoryInfo.name;
+    [self addNewsTable];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)addNewsTable{
+    
+    if (_tableWidget == nil) {
+        _tableWidget = [self.storyboard instantiateViewControllerWithIdentifier:@"LegislatorTableViewController"];
+        _tableWidget.categoryInfo = _categoryInfo;
+        _tableWidget.owner = self;
+        _tableWidget.view.frame = self.view.bounds;
+        
+        [self.view addSubview:_tableWidget.view];
+    }
+    else {
+        _tableWidget.categoryInfo = _categoryInfo;
+        [_tableWidget reloadData];
+    }
 }
-*/
 
 @end

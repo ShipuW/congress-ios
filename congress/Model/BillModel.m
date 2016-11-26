@@ -18,7 +18,7 @@
     info.chamber        = [dict objectForKey:@"chamber"];
     info.officialTitle  = [dict objectForKey:@"official_title"];
     info.type           = [dict objectForKey:@"bill_type"];
-    info.sponsor        = [NSString stringWithFormat:@"%@,%@,%@",
+    info.sponsor        = [NSString stringWithFormat:@"%@%@%@",
                            [[dict objectForKey:@"sponsor"] objectForKey:@"title"],
                            [[dict objectForKey:@"sponsor"] objectForKey:@"first_name"],
                            [[dict objectForKey:@"sponsor"] objectForKey:@"last_name"]

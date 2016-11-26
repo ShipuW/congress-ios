@@ -33,7 +33,7 @@
 }
 
 - (void)presentLeftMenu{
-    [self.sideMenuViewController presentLeftMenuViewController];
+    [self.slideMenuController openLeft];
 }
 /*
 #pragma mark - Navigation

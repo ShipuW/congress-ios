@@ -1,15 +1,12 @@
 PODS:
-  - JSONModel (1.7.0)
-  - RESideMenu (4.0.7)
+  - SlideMenuControllerOC (1.0.1)
 
 DEPENDENCIES:
-  - JSONModel
-  - RESideMenu (~> 4.0.7)
+  - SlideMenuControllerOC
 
 SPEC CHECKSUMS:
-  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
-  RESideMenu: f24c508404b49c667344c54aba7e590883533958
+  SlideMenuControllerOC: c0527642a48fa16602bb08257c1ffed0e1bd09b7
 
-PODFILE CHECKSUM: b3e5c5b8ae8730f80dc1ad5ad30db9c0e6e5e886
+PODFILE CHECKSUM: 4bd0de76c02c5b04f1de3b82b0083a753e33829b
 
 COCOAPODS: 1.0.1

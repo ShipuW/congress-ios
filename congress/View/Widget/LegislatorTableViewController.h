@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GetLegislators.h"
+#import "LegislatorTableViewCell.h"
 
 @interface LegislatorTableViewController : BaseTableViewController
+
+@property(nonatomic, strong) CategoryModel    *categoryInfo;
 
 @end

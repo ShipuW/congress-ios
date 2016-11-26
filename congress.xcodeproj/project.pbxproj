@@ -8,26 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		07EF88A2F39AC336D20DBB2B /* libPods-congress.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B67B4FACAC558B1C4F70A1C5 /* libPods-congress.a */; };
+		1439437E1DEA0DB800451A5A /* CommitteeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439437C1DEA0DB800451A5A /* CommitteeDetailViewController.m */; };
+		1439437F1DEA0DB800451A5A /* CommitteeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1439437D1DEA0DB800451A5A /* CommitteeDetailViewController.xib */; };
+		143943921DEA0DD400451A5A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143943811DEA0DD400451A5A /* AboutViewController.m */; };
+		143943931DEA0DD400451A5A /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143943831DEA0DD400451A5A /* BaseViewController.m */; };
+		143943941DEA0DD400451A5A /* BillDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143943851DEA0DD400451A5A /* BillDetailViewController.m */; };
+		143943951DEA0DD400451A5A /* BillDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 143943861DEA0DD400451A5A /* BillDetailViewController.xib */; };
+		143943961DEA0DD400451A5A /* BillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143943881DEA0DD400451A5A /* BillViewController.m */; };
+		143943971DEA0DD400451A5A /* CommitteeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439438A1DEA0DD400451A5A /* CommitteeViewController.m */; };
+		143943981DEA0DD400451A5A /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439438C1DEA0DD400451A5A /* FavoriteViewController.m */; };
+		143943991DEA0DD400451A5A /* LegislatorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439438E1DEA0DD400451A5A /* LegislatorDetailViewController.m */; };
+		1439439A1DEA0DD400451A5A /* LegislatorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1439438F1DEA0DD400451A5A /* LegislatorDetailViewController.xib */; };
+		1439439B1DEA0DD400451A5A /* LegislatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143943911DEA0DD400451A5A /* LegislatorViewController.m */; };
 		1494A60A1DDF9C0400E3282D /* LegislatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1494A6091DDF9C0400E3282D /* LegislatorModel.m */; };
 		1494A60D1DDF9C2500E3282D /* BillModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1494A60C1DDF9C2500E3282D /* BillModel.m */; };
 		1494A6101DDF9C3800E3282D /* CommitteeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1494A60F1DDF9C3800E3282D /* CommitteeModel.m */; };
 		1494A6311DDF9DE300E3282D /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1494A6301DDF9DE300E3282D /* BaseModel.m */; };
-		149EE1F81DE70306001F500F /* BillTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 149EE1EB1DE70306001F500F /* BillTableViewCell.m */; };
-		149EE1F91DE70306001F500F /* BillTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149EE1ED1DE70306001F500F /* BillTableViewController.m */; };
-		149EE1FA1DE70306001F500F /* CommitteeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 149EE1EF1DE70306001F500F /* CommitteeTableViewCell.m */; };
-		149EE1FB1DE70306001F500F /* CommitteeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149EE1F11DE70306001F500F /* CommitteeTableViewController.m */; };
-		149EE1FD1DE70306001F500F /* LegislatorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 149EE1F51DE70306001F500F /* LegislatorTableViewCell.m */; };
-		149EE1FE1DE70306001F500F /* LegislatorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149EE1F71DE70306001F500F /* LegislatorTableViewController.m */; };
-		149EE20B1DE70314001F500F /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149EE2001DE70314001F500F /* AboutViewController.m */; };
-		149EE20C1DE70314001F500F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149EE2021DE70314001F500F /* BaseViewController.m */; };
-		149EE20D1DE70314001F500F /* BillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149EE2041DE70314001F500F /* BillViewController.m */; };
-		149EE20E1DE70314001F500F /* CommitteeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149EE2061DE70314001F500F /* CommitteeViewController.m */; };
-		149EE20F1DE70314001F500F /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149EE2081DE70314001F500F /* FavoriteViewController.m */; };
-		149EE2101DE70314001F500F /* LegislatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149EE20A1DE70314001F500F /* LegislatorViewController.m */; };
-		149EE2131DE703E7001F500F /* LeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149EE2121DE703E7001F500F /* LeftMenuTableViewController.m */; };
-		149EE2171DE71273001F500F /* LeftMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 149EE2161DE71273001F500F /* LeftMenuTableViewCell.m */; };
-		14A6AECD1DE77DAB00EFD8BA /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A6AECC1DE77DAB00EFD8BA /* BaseTableViewCell.m */; };
-		14A6AED01DE77DC200EFD8BA /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A6AECF1DE77DC200EFD8BA /* BaseTableViewController.m */; };
+		14A6AED41DE7875200EFD8BA /* BaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A6AED31DE7875200EFD8BA /* BaseOperation.m */; };
 		14B759871DDF972B00F6AA29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B759861DDF972B00F6AA29 /* main.m */; };
 		14B7598A1DDF972B00F6AA29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B759891DDF972B00F6AA29 /* AppDelegate.m */; };
 		14B759901DDF972B00F6AA29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B7598E1DDF972B00F6AA29 /* Main.storyboard */; };
@@ -35,6 +32,23 @@
 		14B759951DDF972B00F6AA29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B759931DDF972B00F6AA29 /* LaunchScreen.storyboard */; };
 		14B759A01DDF972B00F6AA29 /* congressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B7599F1DDF972B00F6AA29 /* congressTests.m */; };
 		14B759AB1DDF972B00F6AA29 /* congressUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B759AA1DDF972B00F6AA29 /* congressUITests.m */; };
+		14BC98201DE99AB30000AEDB /* GetLegislators.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC981F1DE99AB30000AEDB /* GetLegislators.m */; };
+		14BC98231DE99AC80000AEDB /* GetBillls.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC98221DE99AC80000AEDB /* GetBillls.m */; };
+		14BC98261DE99ADE0000AEDB /* GetCommittees.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC98251DE99ADE0000AEDB /* GetCommittees.m */; };
+		14BC983C1DE99E500000AEDB /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC983B1DE99E500000AEDB /* BaseController.m */; };
+		14BC98471DE99E650000AEDB /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC983E1DE99E650000AEDB /* BaseTableViewCell.m */; };
+		14BC98481DE99E650000AEDB /* BillTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC98401DE99E650000AEDB /* BillTableViewCell.m */; };
+		14BC98491DE99E650000AEDB /* CommitteeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC98421DE99E650000AEDB /* CommitteeTableViewCell.m */; };
+		14BC984A1DE99E650000AEDB /* LeftMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC98441DE99E650000AEDB /* LeftMenuTableViewCell.m */; };
+		14BC984B1DE99E650000AEDB /* LegislatorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC98461DE99E650000AEDB /* LegislatorTableViewCell.m */; };
+		14BC98681DE99E7C0000AEDB /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC985F1DE99E7C0000AEDB /* BaseTableViewController.m */; };
+		14BC98691DE99E7C0000AEDB /* BillTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC98611DE99E7C0000AEDB /* BillTableViewController.m */; };
+		14BC986A1DE99E7C0000AEDB /* CommitteeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC98631DE99E7C0000AEDB /* CommitteeTableViewController.m */; };
+		14BC986B1DE99E7C0000AEDB /* LeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC98651DE99E7C0000AEDB /* LeftMenuTableViewController.m */; };
+		14BC986C1DE99E7C0000AEDB /* LegislatorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC98671DE99E7C0000AEDB /* LegislatorTableViewController.m */; };
+		14BC986F1DE99EC40000AEDB /* BaseWidgetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC986E1DE99EC40000AEDB /* BaseWidgetController.m */; };
+		14BC98751DE9A4AB0000AEDB /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC98741DE9A4AB0000AEDB /* CategoryModel.m */; };
+		14BC98791DE9B6A20000AEDB /* ImageDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC98781DE9B6A20000AEDB /* ImageDownload.m */; };
 		6A12AC84EC8F752B530F465D /* libPods-congressUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08DD79A67B0CB9C4BC89D76E /* libPods-congressUITests.a */; };
 		85FB89CD7BB25BC0E7A176BF /* libPods-congressTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D98A7209F950F3C728C6D5 /* libPods-congressTests.a */; };
 /* End PBXBuildFile section */
@@ -58,6 +72,27 @@
 
 /* Begin PBXFileReference section */
 		08DD79A67B0CB9C4BC89D76E /* libPods-congressUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-congressUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1439437B1DEA0DB800451A5A /* CommitteeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeDetailViewController.h; sourceTree = "<group>"; };
+		1439437C1DEA0DB800451A5A /* CommitteeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeDetailViewController.m; sourceTree = "<group>"; };
+		1439437D1DEA0DB800451A5A /* CommitteeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommitteeDetailViewController.xib; sourceTree = "<group>"; };
+		143943801DEA0DD400451A5A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		143943811DEA0DD400451A5A /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		143943821DEA0DD400451A5A /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		143943831DEA0DD400451A5A /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		143943841DEA0DD400451A5A /* BillDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillDetailViewController.h; sourceTree = "<group>"; };
+		143943851DEA0DD400451A5A /* BillDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillDetailViewController.m; sourceTree = "<group>"; };
+		143943861DEA0DD400451A5A /* BillDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillDetailViewController.xib; sourceTree = "<group>"; };
+		143943871DEA0DD400451A5A /* BillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillViewController.h; sourceTree = "<group>"; };
+		143943881DEA0DD400451A5A /* BillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillViewController.m; sourceTree = "<group>"; };
+		143943891DEA0DD400451A5A /* CommitteeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeViewController.h; sourceTree = "<group>"; };
+		1439438A1DEA0DD400451A5A /* CommitteeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeViewController.m; sourceTree = "<group>"; };
+		1439438B1DEA0DD400451A5A /* FavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteViewController.h; sourceTree = "<group>"; };
+		1439438C1DEA0DD400451A5A /* FavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteViewController.m; sourceTree = "<group>"; };
+		1439438D1DEA0DD400451A5A /* LegislatorDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegislatorDetailViewController.h; sourceTree = "<group>"; };
+		1439438E1DEA0DD400451A5A /* LegislatorDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegislatorDetailViewController.m; sourceTree = "<group>"; };
+		1439438F1DEA0DD400451A5A /* LegislatorDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LegislatorDetailViewController.xib; sourceTree = "<group>"; };
+		143943901DEA0DD400451A5A /* LegislatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegislatorViewController.h; sourceTree = "<group>"; };
+		143943911DEA0DD400451A5A /* LegislatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegislatorViewController.m; sourceTree = "<group>"; };
 		1494A6081DDF9C0400E3282D /* LegislatorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LegislatorModel.h; path = Model/LegislatorModel.h; sourceTree = "<group>"; };
 		1494A6091DDF9C0400E3282D /* LegislatorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LegislatorModel.m; path = Model/LegislatorModel.m; sourceTree = "<group>"; };
 		1494A60B1DDF9C2500E3282D /* BillModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillModel.h; path = Model/BillModel.h; sourceTree = "<group>"; };
@@ -66,40 +101,10 @@
 		1494A60F1DDF9C3800E3282D /* CommitteeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommitteeModel.m; path = Model/CommitteeModel.m; sourceTree = "<group>"; };
 		1494A62F1DDF9DE300E3282D /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseModel.h; path = Model/BaseModel.h; sourceTree = "<group>"; };
 		1494A6301DDF9DE300E3282D /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseModel.m; path = Model/BaseModel.m; sourceTree = "<group>"; };
-		149EE1EA1DE70306001F500F /* BillTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillTableViewCell.h; sourceTree = "<group>"; };
-		149EE1EB1DE70306001F500F /* BillTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillTableViewCell.m; sourceTree = "<group>"; };
-		149EE1EC1DE70306001F500F /* BillTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillTableViewController.h; sourceTree = "<group>"; };
-		149EE1ED1DE70306001F500F /* BillTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillTableViewController.m; sourceTree = "<group>"; };
-		149EE1EE1DE70306001F500F /* CommitteeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeTableViewCell.h; sourceTree = "<group>"; };
-		149EE1EF1DE70306001F500F /* CommitteeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeTableViewCell.m; sourceTree = "<group>"; };
-		149EE1F01DE70306001F500F /* CommitteeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeTableViewController.h; sourceTree = "<group>"; };
-		149EE1F11DE70306001F500F /* CommitteeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeTableViewController.m; sourceTree = "<group>"; };
-		149EE1F41DE70306001F500F /* LegislatorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegislatorTableViewCell.h; sourceTree = "<group>"; };
-		149EE1F51DE70306001F500F /* LegislatorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegislatorTableViewCell.m; sourceTree = "<group>"; };
-		149EE1F61DE70306001F500F /* LegislatorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegislatorTableViewController.h; sourceTree = "<group>"; };
-		149EE1F71DE70306001F500F /* LegislatorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegislatorTableViewController.m; sourceTree = "<group>"; };
-		149EE1FF1DE70314001F500F /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = View/Page/AboutViewController.h; sourceTree = "<group>"; };
-		149EE2001DE70314001F500F /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = View/Page/AboutViewController.m; sourceTree = "<group>"; };
-		149EE2011DE70314001F500F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = View/Page/BaseViewController.h; sourceTree = "<group>"; };
-		149EE2021DE70314001F500F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = View/Page/BaseViewController.m; sourceTree = "<group>"; };
-		149EE2031DE70314001F500F /* BillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillViewController.h; path = View/Page/BillViewController.h; sourceTree = "<group>"; };
-		149EE2041DE70314001F500F /* BillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillViewController.m; path = View/Page/BillViewController.m; sourceTree = "<group>"; };
-		149EE2051DE70314001F500F /* CommitteeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommitteeViewController.h; path = View/Page/CommitteeViewController.h; sourceTree = "<group>"; };
-		149EE2061DE70314001F500F /* CommitteeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommitteeViewController.m; path = View/Page/CommitteeViewController.m; sourceTree = "<group>"; };
-		149EE2071DE70314001F500F /* FavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavoriteViewController.h; path = View/Page/FavoriteViewController.h; sourceTree = "<group>"; };
-		149EE2081DE70314001F500F /* FavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavoriteViewController.m; path = View/Page/FavoriteViewController.m; sourceTree = "<group>"; };
-		149EE2091DE70314001F500F /* LegislatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LegislatorViewController.h; path = View/Page/LegislatorViewController.h; sourceTree = "<group>"; };
-		149EE20A1DE70314001F500F /* LegislatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LegislatorViewController.m; path = View/Page/LegislatorViewController.m; sourceTree = "<group>"; };
-		149EE2111DE703E7001F500F /* LeftMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuTableViewController.h; sourceTree = "<group>"; };
-		149EE2121DE703E7001F500F /* LeftMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuTableViewController.m; sourceTree = "<group>"; };
 		149EE2141DE7063C001F500F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		149EE2151DE71273001F500F /* LeftMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuTableViewCell.h; sourceTree = "<group>"; };
-		149EE2161DE71273001F500F /* LeftMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuTableViewCell.m; sourceTree = "<group>"; };
 		14A6AECA1DE7607A00EFD8BA /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
-		14A6AECB1DE77DAB00EFD8BA /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
-		14A6AECC1DE77DAB00EFD8BA /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
-		14A6AECE1DE77DC200EFD8BA /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
-		14A6AECF1DE77DC200EFD8BA /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		14A6AED21DE7875200EFD8BA /* BaseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseOperation.h; sourceTree = "<group>"; };
+		14A6AED31DE7875200EFD8BA /* BaseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseOperation.m; sourceTree = "<group>"; };
 		14B759821DDF972B00F6AA29 /* congress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = congress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B759861DDF972B00F6AA29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14B759881DDF972B00F6AA29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +119,40 @@
 		14B759A61DDF972B00F6AA29 /* congressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = congressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B759AA1DDF972B00F6AA29 /* congressUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = congressUITests.m; sourceTree = "<group>"; };
 		14B759AC1DDF972B00F6AA29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14BC981E1DE99AB20000AEDB /* GetLegislators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLegislators.h; sourceTree = "<group>"; };
+		14BC981F1DE99AB30000AEDB /* GetLegislators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetLegislators.m; sourceTree = "<group>"; };
+		14BC98211DE99AC80000AEDB /* GetBillls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetBillls.h; sourceTree = "<group>"; };
+		14BC98221DE99AC80000AEDB /* GetBillls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetBillls.m; sourceTree = "<group>"; };
+		14BC98241DE99ADE0000AEDB /* GetCommittees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetCommittees.h; sourceTree = "<group>"; };
+		14BC98251DE99ADE0000AEDB /* GetCommittees.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetCommittees.m; sourceTree = "<group>"; };
+		14BC983A1DE99E500000AEDB /* BaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseController.h; sourceTree = "<group>"; };
+		14BC983B1DE99E500000AEDB /* BaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseController.m; sourceTree = "<group>"; };
+		14BC983D1DE99E650000AEDB /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableViewCell.h; path = congress/View/Cell/BaseTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		14BC983E1DE99E650000AEDB /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableViewCell.m; path = congress/View/Cell/BaseTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		14BC983F1DE99E650000AEDB /* BillTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillTableViewCell.h; path = congress/View/Cell/BillTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		14BC98401DE99E650000AEDB /* BillTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillTableViewCell.m; path = congress/View/Cell/BillTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		14BC98411DE99E650000AEDB /* CommitteeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommitteeTableViewCell.h; path = congress/View/Cell/CommitteeTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		14BC98421DE99E650000AEDB /* CommitteeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommitteeTableViewCell.m; path = congress/View/Cell/CommitteeTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		14BC98431DE99E650000AEDB /* LeftMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuTableViewCell.h; path = congress/View/Cell/LeftMenuTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		14BC98441DE99E650000AEDB /* LeftMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuTableViewCell.m; path = congress/View/Cell/LeftMenuTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		14BC98451DE99E650000AEDB /* LegislatorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LegislatorTableViewCell.h; path = congress/View/Cell/LegislatorTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		14BC98461DE99E650000AEDB /* LegislatorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LegislatorTableViewCell.m; path = congress/View/Cell/LegislatorTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		14BC985E1DE99E7C0000AEDB /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableViewController.h; path = congress/View/Widget/BaseTableViewController.h; sourceTree = SOURCE_ROOT; };
+		14BC985F1DE99E7C0000AEDB /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableViewController.m; path = congress/View/Widget/BaseTableViewController.m; sourceTree = SOURCE_ROOT; };
+		14BC98601DE99E7C0000AEDB /* BillTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillTableViewController.h; path = congress/View/Widget/BillTableViewController.h; sourceTree = SOURCE_ROOT; };
+		14BC98611DE99E7C0000AEDB /* BillTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillTableViewController.m; path = congress/View/Widget/BillTableViewController.m; sourceTree = SOURCE_ROOT; };
+		14BC98621DE99E7C0000AEDB /* CommitteeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommitteeTableViewController.h; path = congress/View/Widget/CommitteeTableViewController.h; sourceTree = SOURCE_ROOT; };
+		14BC98631DE99E7C0000AEDB /* CommitteeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommitteeTableViewController.m; path = congress/View/Widget/CommitteeTableViewController.m; sourceTree = SOURCE_ROOT; };
+		14BC98641DE99E7C0000AEDB /* LeftMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuTableViewController.h; path = congress/View/Widget/LeftMenuTableViewController.h; sourceTree = SOURCE_ROOT; };
+		14BC98651DE99E7C0000AEDB /* LeftMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuTableViewController.m; path = congress/View/Widget/LeftMenuTableViewController.m; sourceTree = SOURCE_ROOT; };
+		14BC98661DE99E7C0000AEDB /* LegislatorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LegislatorTableViewController.h; path = congress/View/Widget/LegislatorTableViewController.h; sourceTree = SOURCE_ROOT; };
+		14BC98671DE99E7C0000AEDB /* LegislatorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LegislatorTableViewController.m; path = congress/View/Widget/LegislatorTableViewController.m; sourceTree = SOURCE_ROOT; };
+		14BC986D1DE99EC40000AEDB /* BaseWidgetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseWidgetController.h; path = congress/View/Widget/BaseWidgetController.h; sourceTree = SOURCE_ROOT; };
+		14BC986E1DE99EC40000AEDB /* BaseWidgetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseWidgetController.m; path = congress/View/Widget/BaseWidgetController.m; sourceTree = SOURCE_ROOT; };
+		14BC98731DE9A4AB0000AEDB /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryModel.h; path = Model/CategoryModel.h; sourceTree = "<group>"; };
+		14BC98741DE9A4AB0000AEDB /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryModel.m; path = Model/CategoryModel.m; sourceTree = "<group>"; };
+		14BC98771DE9B6A20000AEDB /* ImageDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownload.h; sourceTree = "<group>"; };
+		14BC98781DE9B6A20000AEDB /* ImageDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownload.m; sourceTree = "<group>"; };
 		22163F3AEF801027886E7207 /* Pods-congressUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-congressUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-congressUITests/Pods-congressUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C4C0061D564EEE2BEE120E2 /* Pods-congress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-congress.debug.xcconfig"; path = "Pods/Target Support Files/Pods-congress/Pods-congress.debug.xcconfig"; sourceTree = "<group>"; };
 		48661CD019ADA27A68EF21A7 /* Pods-congressTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-congressTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-congressTests/Pods-congressTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +202,8 @@
 				1494A60C1DDF9C2500E3282D /* BillModel.m */,
 				1494A60E1DDF9C3800E3282D /* CommitteeModel.h */,
 				1494A60F1DDF9C3800E3282D /* CommitteeModel.m */,
+				14BC98731DE9A4AB0000AEDB /* CategoryModel.h */,
+				14BC98741DE9A4AB0000AEDB /* CategoryModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -170,48 +211,64 @@
 		1494A61F1DDF9CBD00E3282D /* Page */ = {
 			isa = PBXGroup;
 			children = (
-				149EE1FF1DE70314001F500F /* AboutViewController.h */,
-				149EE2001DE70314001F500F /* AboutViewController.m */,
-				149EE2011DE70314001F500F /* BaseViewController.h */,
-				149EE2021DE70314001F500F /* BaseViewController.m */,
-				149EE2031DE70314001F500F /* BillViewController.h */,
-				149EE2041DE70314001F500F /* BillViewController.m */,
-				149EE2051DE70314001F500F /* CommitteeViewController.h */,
-				149EE2061DE70314001F500F /* CommitteeViewController.m */,
-				149EE2071DE70314001F500F /* FavoriteViewController.h */,
-				149EE2081DE70314001F500F /* FavoriteViewController.m */,
-				149EE2091DE70314001F500F /* LegislatorViewController.h */,
-				149EE20A1DE70314001F500F /* LegislatorViewController.m */,
+				143943821DEA0DD400451A5A /* BaseViewController.h */,
+				143943831DEA0DD400451A5A /* BaseViewController.m */,
+				143943901DEA0DD400451A5A /* LegislatorViewController.h */,
+				143943911DEA0DD400451A5A /* LegislatorViewController.m */,
+				1439438D1DEA0DD400451A5A /* LegislatorDetailViewController.h */,
+				1439438E1DEA0DD400451A5A /* LegislatorDetailViewController.m */,
+				1439438F1DEA0DD400451A5A /* LegislatorDetailViewController.xib */,
+				143943871DEA0DD400451A5A /* BillViewController.h */,
+				143943881DEA0DD400451A5A /* BillViewController.m */,
+				143943841DEA0DD400451A5A /* BillDetailViewController.h */,
+				143943851DEA0DD400451A5A /* BillDetailViewController.m */,
+				143943861DEA0DD400451A5A /* BillDetailViewController.xib */,
+				143943891DEA0DD400451A5A /* CommitteeViewController.h */,
+				1439438A1DEA0DD400451A5A /* CommitteeViewController.m */,
+				1439437B1DEA0DB800451A5A /* CommitteeDetailViewController.h */,
+				1439437C1DEA0DB800451A5A /* CommitteeDetailViewController.m */,
+				1439437D1DEA0DB800451A5A /* CommitteeDetailViewController.xib */,
+				1439438B1DEA0DD400451A5A /* FavoriteViewController.h */,
+				1439438C1DEA0DD400451A5A /* FavoriteViewController.m */,
+				143943801DEA0DD400451A5A /* AboutViewController.h */,
+				143943811DEA0DD400451A5A /* AboutViewController.m */,
 			);
-			name = Page;
+			path = Page;
 			sourceTree = "<group>";
 		};
 		1494A6381DDF9E8700E3282D /* Widget */ = {
 			isa = PBXGroup;
 			children = (
-				14A6AECB1DE77DAB00EFD8BA /* BaseTableViewCell.h */,
-				14A6AECC1DE77DAB00EFD8BA /* BaseTableViewCell.m */,
-				14A6AECE1DE77DC200EFD8BA /* BaseTableViewController.h */,
-				14A6AECF1DE77DC200EFD8BA /* BaseTableViewController.m */,
-				149EE1EA1DE70306001F500F /* BillTableViewCell.h */,
-				149EE1EB1DE70306001F500F /* BillTableViewCell.m */,
-				149EE1EC1DE70306001F500F /* BillTableViewController.h */,
-				149EE1ED1DE70306001F500F /* BillTableViewController.m */,
-				149EE1EE1DE70306001F500F /* CommitteeTableViewCell.h */,
-				149EE1EF1DE70306001F500F /* CommitteeTableViewCell.m */,
-				149EE1F01DE70306001F500F /* CommitteeTableViewController.h */,
-				149EE1F11DE70306001F500F /* CommitteeTableViewController.m */,
-				149EE1F41DE70306001F500F /* LegislatorTableViewCell.h */,
-				149EE1F51DE70306001F500F /* LegislatorTableViewCell.m */,
-				149EE1F61DE70306001F500F /* LegislatorTableViewController.h */,
-				149EE1F71DE70306001F500F /* LegislatorTableViewController.m */,
-				149EE2151DE71273001F500F /* LeftMenuTableViewCell.h */,
-				149EE2161DE71273001F500F /* LeftMenuTableViewCell.m */,
-				149EE2111DE703E7001F500F /* LeftMenuTableViewController.h */,
-				149EE2121DE703E7001F500F /* LeftMenuTableViewController.m */,
+				14BC986D1DE99EC40000AEDB /* BaseWidgetController.h */,
+				14BC986E1DE99EC40000AEDB /* BaseWidgetController.m */,
+				14BC985E1DE99E7C0000AEDB /* BaseTableViewController.h */,
+				14BC985F1DE99E7C0000AEDB /* BaseTableViewController.m */,
+				14BC98661DE99E7C0000AEDB /* LegislatorTableViewController.h */,
+				14BC98671DE99E7C0000AEDB /* LegislatorTableViewController.m */,
+				14BC98601DE99E7C0000AEDB /* BillTableViewController.h */,
+				14BC98611DE99E7C0000AEDB /* BillTableViewController.m */,
+				14BC98621DE99E7C0000AEDB /* CommitteeTableViewController.h */,
+				14BC98631DE99E7C0000AEDB /* CommitteeTableViewController.m */,
+				14BC98641DE99E7C0000AEDB /* LeftMenuTableViewController.h */,
+				14BC98651DE99E7C0000AEDB /* LeftMenuTableViewController.m */,
 			);
 			name = Widget;
 			path = View/Widget;
+			sourceTree = "<group>";
+		};
+		14A6AED11DE786F400EFD8BA /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				14A6AED21DE7875200EFD8BA /* BaseOperation.h */,
+				14A6AED31DE7875200EFD8BA /* BaseOperation.m */,
+				14BC981E1DE99AB20000AEDB /* GetLegislators.h */,
+				14BC981F1DE99AB30000AEDB /* GetLegislators.m */,
+				14BC98211DE99AC80000AEDB /* GetBillls.h */,
+				14BC98221DE99AC80000AEDB /* GetBillls.m */,
+				14BC98241DE99ADE0000AEDB /* GetCommittees.h */,
+				14BC98251DE99ADE0000AEDB /* GetCommittees.m */,
+			);
+			path = Operation;
 			sourceTree = "<group>";
 		};
 		14B759791DDF972A00F6AA29 = {
@@ -242,8 +299,10 @@
 				14B759881DDF972B00F6AA29 /* AppDelegate.h */,
 				14B759891DDF972B00F6AA29 /* AppDelegate.m */,
 				14A6AECA1DE7607A00EFD8BA /* Constant.h */,
+				14BC98761DE9B6510000AEDB /* Global */,
 				1494A6111DDF9C4300E3282D /* Model */,
 				14B759CB1DDF9A0300F6AA29 /* View */,
+				14A6AED11DE786F400EFD8BA /* Operation */,
 				14B7598E1DDF972B00F6AA29 /* Main.storyboard */,
 				14B759911DDF972B00F6AA29 /* Assets.xcassets */,
 				14B759931DDF972B00F6AA29 /* LaunchScreen.storyboard */,
@@ -283,10 +342,40 @@
 		14B759CB1DDF9A0300F6AA29 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				14BC983A1DE99E500000AEDB /* BaseController.h */,
+				14BC983B1DE99E500000AEDB /* BaseController.m */,
 				1494A61F1DDF9CBD00E3282D /* Page */,
 				1494A6381DDF9E8700E3282D /* Widget */,
+				14BC98271DE99CAB0000AEDB /* Cell */,
 			);
-			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		14BC98271DE99CAB0000AEDB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				14BC983D1DE99E650000AEDB /* BaseTableViewCell.h */,
+				14BC983E1DE99E650000AEDB /* BaseTableViewCell.m */,
+				14BC98451DE99E650000AEDB /* LegislatorTableViewCell.h */,
+				14BC98461DE99E650000AEDB /* LegislatorTableViewCell.m */,
+				14BC983F1DE99E650000AEDB /* BillTableViewCell.h */,
+				14BC98401DE99E650000AEDB /* BillTableViewCell.m */,
+				14BC98411DE99E650000AEDB /* CommitteeTableViewCell.h */,
+				14BC98421DE99E650000AEDB /* CommitteeTableViewCell.m */,
+				14BC98431DE99E650000AEDB /* LeftMenuTableViewCell.h */,
+				14BC98441DE99E650000AEDB /* LeftMenuTableViewCell.m */,
+			);
+			name = Cell;
+			path = View/Cell;
+			sourceTree = "<group>";
+		};
+		14BC98761DE9B6510000AEDB /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				14BC98771DE9B6A20000AEDB /* ImageDownload.h */,
+				14BC98781DE9B6A20000AEDB /* ImageDownload.m */,
+			);
+			path = Global;
 			sourceTree = "<group>";
 		};
 		45DB1DB4E071F92BD3570CC8 /* Pods */ = {
@@ -430,6 +519,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				14B759951DDF972B00F6AA29 /* LaunchScreen.storyboard in Resources */,
+				143943951DEA0DD400451A5A /* BillDetailViewController.xib in Resources */,
+				1439437F1DEA0DB800451A5A /* CommitteeDetailViewController.xib in Resources */,
+				1439439A1DEA0DD400451A5A /* LegislatorDetailViewController.xib in Resources */,
 				14B759921DDF972B00F6AA29 /* Assets.xcassets in Resources */,
 				14B759901DDF972B00F6AA29 /* Main.storyboard in Resources */,
 			);
@@ -579,28 +671,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				149EE20F1DE70314001F500F /* FavoriteViewController.m in Sources */,
-				149EE1FA1DE70306001F500F /* CommitteeTableViewCell.m in Sources */,
-				149EE20D1DE70314001F500F /* BillViewController.m in Sources */,
-				149EE20C1DE70314001F500F /* BaseViewController.m in Sources */,
-				149EE1FD1DE70306001F500F /* LegislatorTableViewCell.m in Sources */,
-				149EE2171DE71273001F500F /* LeftMenuTableViewCell.m in Sources */,
-				14A6AED01DE77DC200EFD8BA /* BaseTableViewController.m in Sources */,
-				149EE1F81DE70306001F500F /* BillTableViewCell.m in Sources */,
-				149EE1FE1DE70306001F500F /* LegislatorTableViewController.m in Sources */,
+				143943971DEA0DD400451A5A /* CommitteeViewController.m in Sources */,
+				143943961DEA0DD400451A5A /* BillViewController.m in Sources */,
+				14BC986F1DE99EC40000AEDB /* BaseWidgetController.m in Sources */,
+				143943981DEA0DD400451A5A /* FavoriteViewController.m in Sources */,
+				14BC98471DE99E650000AEDB /* BaseTableViewCell.m in Sources */,
+				14BC98751DE9A4AB0000AEDB /* CategoryModel.m in Sources */,
+				143943991DEA0DD400451A5A /* LegislatorDetailViewController.m in Sources */,
+				14BC98261DE99ADE0000AEDB /* GetCommittees.m in Sources */,
+				14BC98231DE99AC80000AEDB /* GetBillls.m in Sources */,
+				14BC98691DE99E7C0000AEDB /* BillTableViewController.m in Sources */,
 				1494A60D1DDF9C2500E3282D /* BillModel.m in Sources */,
+				14BC98481DE99E650000AEDB /* BillTableViewCell.m in Sources */,
+				14BC986A1DE99E7C0000AEDB /* CommitteeTableViewController.m in Sources */,
+				14BC98491DE99E650000AEDB /* CommitteeTableViewCell.m in Sources */,
 				1494A6311DDF9DE300E3282D /* BaseModel.m in Sources */,
-				149EE2131DE703E7001F500F /* LeftMenuTableViewController.m in Sources */,
+				14BC984A1DE99E650000AEDB /* LeftMenuTableViewCell.m in Sources */,
+				14BC98201DE99AB30000AEDB /* GetLegislators.m in Sources */,
+				14BC983C1DE99E500000AEDB /* BaseController.m in Sources */,
 				1494A60A1DDF9C0400E3282D /* LegislatorModel.m in Sources */,
-				14A6AECD1DE77DAB00EFD8BA /* BaseTableViewCell.m in Sources */,
-				149EE1FB1DE70306001F500F /* CommitteeTableViewController.m in Sources */,
+				14BC98681DE99E7C0000AEDB /* BaseTableViewController.m in Sources */,
+				14A6AED41DE7875200EFD8BA /* BaseOperation.m in Sources */,
+				1439437E1DEA0DB800451A5A /* CommitteeDetailViewController.m in Sources */,
 				1494A6101DDF9C3800E3282D /* CommitteeModel.m in Sources */,
-				149EE20B1DE70314001F500F /* AboutViewController.m in Sources */,
-				149EE20E1DE70314001F500F /* CommitteeViewController.m in Sources */,
-				149EE2101DE70314001F500F /* LegislatorViewController.m in Sources */,
+				143943931DEA0DD400451A5A /* BaseViewController.m in Sources */,
+				14BC984B1DE99E650000AEDB /* LegislatorTableViewCell.m in Sources */,
+				14BC98791DE9B6A20000AEDB /* ImageDownload.m in Sources */,
 				14B7598A1DDF972B00F6AA29 /* AppDelegate.m in Sources */,
-				149EE1F91DE70306001F500F /* BillTableViewController.m in Sources */,
+				14BC986C1DE99E7C0000AEDB /* LegislatorTableViewController.m in Sources */,
 				14B759871DDF972B00F6AA29 /* main.m in Sources */,
+				143943921DEA0DD400451A5A /* AboutViewController.m in Sources */,
+				1439439B1DEA0DD400451A5A /* LegislatorViewController.m in Sources */,
+				143943941DEA0DD400451A5A /* BillDetailViewController.m in Sources */,
+				14BC986B1DE99E7C0000AEDB /* LeftMenuTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

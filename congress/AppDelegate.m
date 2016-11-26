@@ -25,17 +25,31 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     
-    LegislatorViewController* legislatorViewController = [storyboard instantiateViewControllerWithIdentifier:@"LegislatorViewController"];
+    LegislatorViewController* legislatorViewControllerState = [storyboard instantiateViewControllerWithIdentifier:@"LegislatorViewController"];
+    legislatorViewControllerState.title = STATE_TAB_NAME;
+    legislatorViewControllerState.categoryInfo = [CategoryModel infoFromDict:@{@"name":STATE_TAB_NAME}];
+    UINavigationController *legNavigationControllerState = [[UINavigationController alloc] initWithRootViewController:legislatorViewControllerState];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:legislatorViewController];
+    LegislatorViewController* legislatorViewControllerHouse = [storyboard instantiateViewControllerWithIdentifier:@"LegislatorViewController"];
+    legislatorViewControllerHouse.title = HOUSE_TAB_NAME;
+    legislatorViewControllerHouse.categoryInfo = [CategoryModel infoFromDict:@{@"name":HOUSE_TAB_NAME}];
+    UINavigationController *legNavigationControllerHouse = [[UINavigationController alloc] initWithRootViewController:legislatorViewControllerHouse];
+    
+    LegislatorViewController* legislatorViewControllerSenate = [storyboard instantiateViewControllerWithIdentifier:@"LegislatorViewController"];
+    legislatorViewControllerSenate.title = SENATE_TAB_NAME;
+    legislatorViewControllerSenate.categoryInfo = [CategoryModel infoFromDict:@{@"name":SENATE_TAB_NAME}];
+    UINavigationController *legNavigationControllerSenate = [[UINavigationController alloc] initWithRootViewController:legislatorViewControllerSenate];
+    
+    UITabBarController *legislatorTabBarController = [[UITabBarController alloc]init];
+    legislatorTabBarController.viewControllers = [NSArray arrayWithObjects:legNavigationControllerState, legNavigationControllerHouse, legNavigationControllerSenate, nil];
+    
+    
     LeftMenuTableViewController* leftMenuTableViewController = [storyboard instantiateViewControllerWithIdentifier:@"LeftMenuTableViewController"];
-
-    RESideMenu *sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:navigationController
-                                                                    leftMenuViewController:leftMenuTableViewController
-                                                                   rightMenuViewController:nil];
+    SlideMenuController *slideMenuController = [[SlideMenuController alloc] initWithMainViewController:legislatorTabBarController leftMenuViewController:leftMenuTableViewController];
     
-    self.window.rootViewController = sideMenuViewController;
+    self.window.rootViewController = slideMenuController;
     [self.window makeKeyAndVisible];
+
     return YES;
 }
 

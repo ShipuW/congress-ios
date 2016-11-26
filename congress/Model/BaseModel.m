@@ -23,7 +23,7 @@
 
 + (NSArray *)arrayFromDict:(NSDictionary *)dict
 {
-    NSArray *array = [dict objectForKey:NetData];
+    NSArray *array = [dict objectForKey:NetResults];
     return [[self class] arrayFromArray:array];
 }
 
