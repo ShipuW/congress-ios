@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CommitteeModel.h"
 
-@interface CommitteeTableViewCell : BaseTableViewCell
+@interface CommitteeTableViewCell : BaseTableViewCell{
+
+    IBOutlet UILabel *nameLabel;
+    IBOutlet UILabel *idLabel;
+}
 
 @end

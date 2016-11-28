@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FavoriteViewController : BaseViewController
+@interface FavoriteViewController : BaseListViewController
 
 @end

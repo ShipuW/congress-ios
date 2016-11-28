@@ -10,6 +10,7 @@
 
 @interface BaseController : UIViewController <BaseOperationDelegate> {
     BaseOperation     *_operation;
+    NSUserDefaults    *defaults;
 }
 
 @end

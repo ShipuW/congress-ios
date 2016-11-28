@@ -7,6 +7,7 @@
 //
 
 #import "BaseOperation.h"
+#import "CommitteeModel.h"
 
 @interface GetCommittees : BaseOperation
 

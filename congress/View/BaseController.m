@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    defaults = [NSUserDefaults standardUserDefaults];
     // Do any additional setup after loading the view.
 }
 

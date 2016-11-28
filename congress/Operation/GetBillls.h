@@ -7,6 +7,7 @@
 //
 
 #import "BaseOperation.h"
+#import "BillModel.h"
 
 @interface GetBillls : BaseOperation
 

@@ -27,16 +27,19 @@
     
     LegislatorViewController* legislatorViewControllerState = [storyboard instantiateViewControllerWithIdentifier:@"LegislatorViewController"];
     legislatorViewControllerState.title = STATE_TAB_NAME;
-    legislatorViewControllerState.categoryInfo = [CategoryModel infoFromDict:@{@"name":STATE_TAB_NAME}];
+    legislatorViewControllerState.navigationItem.title = STATE_TAB_NAME;
+    legislatorViewControllerState.categoryInfo = [CategoryModel infoFromDict:@{@"name":@""}];
     UINavigationController *legNavigationControllerState = [[UINavigationController alloc] initWithRootViewController:legislatorViewControllerState];
     
     LegislatorViewController* legislatorViewControllerHouse = [storyboard instantiateViewControllerWithIdentifier:@"LegislatorViewController"];
     legislatorViewControllerHouse.title = HOUSE_TAB_NAME;
+    legislatorViewControllerHouse.navigationItem.title = HOUSE_TAB_NAME;
     legislatorViewControllerHouse.categoryInfo = [CategoryModel infoFromDict:@{@"name":HOUSE_TAB_NAME}];
     UINavigationController *legNavigationControllerHouse = [[UINavigationController alloc] initWithRootViewController:legislatorViewControllerHouse];
     
     LegislatorViewController* legislatorViewControllerSenate = [storyboard instantiateViewControllerWithIdentifier:@"LegislatorViewController"];
     legislatorViewControllerSenate.title = SENATE_TAB_NAME;
+    legislatorViewControllerHouse.navigationItem.title = HOUSE_TAB_NAME;
     legislatorViewControllerSenate.categoryInfo = [CategoryModel infoFromDict:@{@"name":SENATE_TAB_NAME}];
     UINavigationController *legNavigationControllerSenate = [[UINavigationController alloc] initWithRootViewController:legislatorViewControllerSenate];
     

@@ -10,15 +10,19 @@
 
 @implementation CommitteeTableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (void)initCell
+{
+    [super initCell];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+
+- (void)setCellData:(CommitteeModel *)info
+{
+    [super setCellData:info];
+    nameLabel.text = info.name;
+    idLabel.text = info.ID;
+
 }
 
 @end

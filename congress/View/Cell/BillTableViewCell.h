@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BillModel.h"
 
-@interface BillTableViewCell : BaseTableViewCell
+@interface BillTableViewCell : BaseTableViewCell{
+
+    IBOutlet UILabel *idLabel;
+    IBOutlet UILabel *nameLabel;
+    IBOutlet UILabel *timeLabel;
+    
+}
 
 @end

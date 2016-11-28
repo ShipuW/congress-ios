@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CommitteeTableViewController.h"
 
-@interface CommitteeViewController : BaseViewController
+@interface CommitteeViewController : BaseListViewController
 
 @end

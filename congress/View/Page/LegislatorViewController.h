@@ -9,11 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "LegislatorTableViewController.h"
 
-@interface LegislatorViewController : BaseViewController{
-    LegislatorTableViewController * _tableWidget;
-}
+@interface LegislatorViewController : BaseListViewController
 
-@property(nonatomic, strong) CategoryModel    *categoryInfo;
 
 
 @end

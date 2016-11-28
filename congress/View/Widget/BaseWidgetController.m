@@ -17,7 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.needRefresh = YES;
     [self reloadData];
 }
 
@@ -27,12 +27,16 @@
 
 - (void)reloadData
 {
-    if (![self isReloadLocalData]) {
-        [self requestServer];
-    }
-    else {
-        [self requestServerOp];//实施子类中网络请求方法
-        [self updateUI];
+    if ([_categoryInfo.name isEqualToString:FAVORITE_CATEGORY]){
+        [self getLocalData];
+    }else{
+        if (![self isReloadLocalData]) {
+            [self requestServer];
+        }
+        else {
+            [self requestServerOp];//实施子类中网络请求方法
+            [self updateUI];
+        }
     }
 }
 
@@ -54,6 +58,9 @@
 
 - (void)requestServerOp
 {
+}
+
+- (void)getLocalData{
 }
 
 @end

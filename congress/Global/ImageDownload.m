@@ -67,7 +67,7 @@
 - (void)downNewsIconThread:(LegislatorModel *)info
 {
 
-    NSURL *url = [NSURL URLWithString:info.imageUrl];
+    NSURL *url = info.imageUrl;
     
 
     if (url != nil) {

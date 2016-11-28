@@ -57,12 +57,21 @@ selector:_selector name:_name object:nil];
 #define SendNotify(_name, _object)  \
 [[NSNotificationCenter defaultCenter] postNotificationName:_name object:_object];
 
-
+#define MAIN_URL CloneUrl
 #define BaseUrl @"https://congress.api.sunlightfoundation.com/"
 #define CloneUrl @"http://104.198.0.197:8080/"
-#define CongressKey @"f50631fa532e41608c78662065118da7"
+#define CongressKey @"&apikey=f50631fa532e41608c78662065118da7"
+#define LEGISLATOR_URL @"legislators?"
+#define BILL_URL @"bills?"
+#define COMMITTEE_URL @"committees?"
+#define ChamberFilter @"&chamber="
+#define ActiveFilterTrue @"&history.active=true"
+#define ActiveFilterFalse @"&history.active=false"
+#define ALLDATAFILTER @"&per_page=all"
+#define NUMBERFILTER50 @"&per_page=50&page=1"
 #define ImageUrl @"https://theunitedstates.io/images/congress/original/"
 #define TwitterUrl @"https://twitter.com/"
+#define FacebookUrl @"https://www.facebook.com/"
 #define HTTPGET             @"GET"
 #define HTTPPOST            @"POST"
 #define RequestTimeout    10
@@ -73,15 +82,37 @@ selector:_selector name:_name object:nil];
 #define NetResults @"results"
 #define NetCount @"count"
 
+#define LEG_TAB_NAME @"legislators"
+#define BIL_TAB_NAME @"bills"
+#define COM_TAB_NAME @"committees"
 
-#define STATE_TAB_NAME @"State"
-#define HOUSE_TAB_NAME @"House"
-#define SENATE_TAB_NAME @"Senate"
+#define STATE_TAB_NAME @"state"
+#define HOUSE_TAB_NAME @"house"
+#define SENATE_TAB_NAME @"senate"
+#define JOINT_TAB_NAME @"joint"
+
+#define FAVORITE_CATEGORY @"local"
+
+#define ACTIVE_TAB_NAME @"active"
+#define NEW_TAB_NAME @"new"
+
+#define SAVE_LEG_KEY @"legislatorSaveKey"
+#define SAVE_BIL_KEY @"billSaveKey"
+#define SAVE_COM_KEY @"committeeSaveKey"
 
 #define ViewTextBlack [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1.0f];
+#define Leftbar_Background_Color [UIColor colorWithRed:241/255.0 green:248/255.0 blue:233/255.0 alpha:1.0f];
+#define Leftbar_Text_Color [UIColor colorWithRed:158/255.0 green:158/255.0 blue:158/255.0 alpha:1.0f];
 
 // 消息通知Key
 #define NofifyNewsIcon      @"NewImage"
+#define AddLegNotice        @"addLegNotification"
+#define AddBilNotice        @"addBilNotification"
+#define AddComNotice        @"addComNotification"
 
+#define LABEL_CELL_ID       @"LabelTableViewCell"
+#define BUTTON_CELL_ID       @"ButtonTableViewCell"
+
+#define LINK_BUTTON_SUFFIX  @"LINK"
 
 #endif /* Constant_h */

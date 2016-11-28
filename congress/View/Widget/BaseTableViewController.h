@@ -7,15 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseWidgetController.h"
 
-@interface BaseTableViewController : BaseWidgetController{
+@interface BaseTableViewController : BaseWidgetController<UISearchBarDelegate>{
     IBOutlet UITableView    *_tableView;
     CGFloat                 _cellHeight;
 }
+@property(strong, nonatomic) NSMutableArray    *filterData;
 
 @property(nonatomic, strong) NSString   *cellIdentifier;
 @property(nonatomic, assign) id         owner;
+@property(strong, nonatomic) NSDictionary *groupedItems;
+@property(strong, nonatomic) NSArray *sectionTitles;
+@property(strong, nonatomic) NSArray *indexTitles;
+@property(strong, nonatomic) NSMutableArray *searchData;
 
 
+- (NSDictionary *)generateGroupedDataFromArray:(NSArray *)array;
 
 @end

@@ -11,7 +11,8 @@
 @interface BaseWidgetController : BaseController
 
 @property(strong, nonatomic) NSMutableArray    *listData;
-
+@property(nonatomic, strong) CategoryModel    *categoryInfo;
+@property(nonatomic) BOOL    needRefresh;
 - (void)updateUI;
 - (void)reloadData;
 - (BOOL)isReloadLocalData;

@@ -11,17 +11,18 @@
 
 @interface LegislatorModel : BaseModel
 
-@property(nonatomic, strong) NSString    *imageUrl;
+@property(nonatomic, strong) NSURL       *imageUrl;
 @property(nonatomic, strong) NSString    *firstName;
 @property(nonatomic, strong) NSString    *lastName;
 @property(nonatomic, strong) NSString    *state;
 @property(nonatomic, strong) NSString    *gender;
 @property(nonatomic, strong) NSString    *birthDate;
 @property(nonatomic, strong) NSString    *fax;
-@property(nonatomic, strong) NSString    *twitterLink;
-@property(nonatomic, strong) NSString    *websiteLink;
+@property(nonatomic, strong) NSURL       *twitterLink;
+@property(nonatomic, strong) NSURL       *facebookLink;
+@property(nonatomic, strong) NSURL       *websiteLink;
 @property(nonatomic, strong) NSString    *office;
 @property(nonatomic, strong) NSString    *endTerm;
 
-
++ (NSArray*)sortByFirstName:(NSArray*)array;
 @end

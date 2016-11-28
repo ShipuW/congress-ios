@@ -10,6 +10,8 @@
 
 @implementation CategoryModel
 
+
+
 + (instancetype)infoFromDict:(NSDictionary *)dict
 {
     CategoryModel *info = [[CategoryModel alloc] init];

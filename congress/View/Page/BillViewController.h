@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BillTableViewController.h"
 
-@interface BillViewController : BaseViewController
+@interface BillViewController : BaseListViewController
 
 @end

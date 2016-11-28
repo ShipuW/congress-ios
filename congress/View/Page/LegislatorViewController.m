@@ -14,12 +14,13 @@
 
 @implementation LegislatorViewController
 
+
 - (void)viewDidLoad {
     
+    tableIdentifier = @"LegislatorTableViewController";
     [super viewDidLoad];
-    self.title = _categoryInfo.name;
-    self.navigationItem.title = _categoryInfo.name;
-    [self addNewsTable];
+
+
     // Do any additional setup after loading the view.
 }
 
@@ -29,20 +30,7 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)addNewsTable{
-    
-    if (_tableWidget == nil) {
-        _tableWidget = [self.storyboard instantiateViewControllerWithIdentifier:@"LegislatorTableViewController"];
-        _tableWidget.categoryInfo = _categoryInfo;
-        _tableWidget.owner = self;
-        _tableWidget.view.frame = self.view.bounds;
-        
-        [self.view addSubview:_tableWidget.view];
-    }
-    else {
-        _tableWidget.categoryInfo = _categoryInfo;
-        [_tableWidget reloadData];
-    }
-}
+
+
 
 @end

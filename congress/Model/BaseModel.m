@@ -52,5 +52,37 @@
     return [self.ID isEqualToString:bInfo.ID];
 }
 
+- (int)getTableDisplayNumber{
+    int res = 0;
+    if (self.ID) res++;
+    if (self.chamber) res++;
+    return res;
+}
+
+- (NSDictionary *)getDictionaryByIndex:(int)index{
+    int i = 0;
+    if(self.ID){
+        if (index == i)return @{@"id":self.ID};
+        i++;
+    }
+    if(self.chamber){
+        if (index == i)return @{@"id":self.ID};
+        i++;
+    }
+    return nil;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder{
+    if(self = [super init]){
+        self.ID = [aDecoder decodeObjectForKey:@"ID"];
+        self.chamber = [aDecoder decodeObjectForKey:@"chamber"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder{
+    [aCoder encodeObject:self.ID forKey:@"ID"];
+    [aCoder encodeObject:self.chamber forKey:@"chamber"];
+}
 
 @end

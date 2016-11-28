@@ -10,6 +10,8 @@
 #define PrefixHeader_pch
 
 
+#import "SLideMenuController.h"
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
@@ -26,12 +28,16 @@
 #import "BaseController.h"
 
 #import "BaseViewController.h"
+#import "BaseListViewController.h"
+#import "BaseDetailViewController.h"
 #import "BaseWidgetController.h"
 #import "BaseTableViewController.h"
 
 
-
 #import "BaseTableViewCell.h"
+#import "BaseDetailTableViewCell.h"
+#import "LabelTableViewCell.h"
+#import "ButtonTableViewCell.h"
 
 #import "SlideMenuController.h"
 // Include any system framework and library headers here that should be included in all compilation units.

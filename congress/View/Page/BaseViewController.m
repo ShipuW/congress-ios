@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNavigationBar];
+    [self setNavigationBarLeftButton];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -25,16 +26,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setNavigationBar{
-    UIButton* button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
-    button.backgroundColor = ViewTextBlack;
-    [button addTarget:self action:@selector(presentLeftMenu) forControlEvents: UIControlEventTouchUpInside];
-    [self.navigationController.navigationBar addSubview:button];
+- (void)setNavigationBarLeftButton{
+     [self addLeftBarButtonWithImage:[UIImage imageNamed:@"leftNaviIcon"]];
 }
 
-- (void)presentLeftMenu{
-    [self.slideMenuController openLeft];
-}
+
+
 /*
 #pragma mark - Navigation
 

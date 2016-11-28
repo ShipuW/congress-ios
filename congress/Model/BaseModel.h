@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BaseModel.h"
 
-@interface BaseModel : NSObject
+@interface BaseModel : NSObject <NSCoding>
 
 @property(nonatomic, strong) NSString    *ID;
 @property(nonatomic, strong) NSString    *chamber;
@@ -17,5 +17,7 @@
 + (instancetype)infoFromDict:(NSDictionary *)dict;
 + (NSArray *)arrayFromDict:(NSDictionary *)dict;
 + (NSArray *)arrayFromArray:(NSArray *)array;
+- (int)getTableDisplayNumber;
+- (NSDictionary *)getDictionaryByIndex:(int)index;
 
 @end

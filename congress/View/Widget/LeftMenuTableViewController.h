@@ -8,6 +8,33 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LeftMenuTableViewController : UITableViewController
+
+
+typedef enum : NSInteger{
+    LeftMenuLeg = 0,
+    LeftMenuBil,
+    LeftMenuCom,
+    LeftMenuFav,
+    LeftMenuAbo
+} LeftMenu;
+
+@protocol LeftMenuProtocol <NSObject>
+
+@required
+-(void)changeViewController:(LeftMenu) menu;
+
+@end
+
+@interface LeftMenuTableViewController : UITableViewController<LeftMenuProtocol, UITableViewDelegate, UITableViewDataSource>
+
+
+@property (retain, nonatomic) NSArray *menus;
+@property (retain, nonatomic) UITabBarController *legislatorViewController;
+@property (retain, nonatomic) UITabBarController *billViewController;
+@property (retain, nonatomic) UITabBarController *committeeViewController;
+@property (retain, nonatomic) UITabBarController *favoriteViewController;
+@property (retain, nonatomic) UIViewController *aboutViewController;
+
+
 
 @end

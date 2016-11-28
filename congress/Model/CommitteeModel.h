@@ -16,4 +16,6 @@
 @property(nonatomic, strong) NSString    *office;
 @property(nonatomic, strong) NSString    *contact;
 
++ (NSArray*)sortByName:(NSArray*)array;
+
 @end

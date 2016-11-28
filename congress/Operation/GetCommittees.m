@@ -10,4 +10,10 @@
 
 @implementation GetCommittees
 
+- (void)parseSuccess:(NSDictionary *)dict
+{
+    NSArray *infos = [CommitteeModel arrayFromDict:dict];
+    [_delegate opSuccess:infos];
+}
+
 @end

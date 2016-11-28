@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LegislatorModel.h"
 
-@interface LegislatorDetailViewController : BaseViewController
+@interface LegislatorDetailViewController : BaseDetailViewController
+
+
+@property(nonatomic, strong) LegislatorModel    *legislatorInfo;
+
+@property (weak, nonatomic) IBOutlet UITableView *infoTable;
+@property (weak, nonatomic) IBOutlet UIImageView *infoImage;
 
 @end

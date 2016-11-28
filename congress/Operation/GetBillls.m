@@ -10,4 +10,10 @@
 
 @implementation GetBillls
 
+- (void)parseSuccess:(NSDictionary *)dict
+{
+    NSArray *infos = [BillModel arrayFromDict:dict];
+    [_delegate opSuccess:infos];
+}
+
 @end

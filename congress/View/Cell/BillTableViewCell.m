@@ -10,15 +10,22 @@
 
 @implementation BillTableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (void)initCell
+{
+    [super initCell];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+
+- (void)setCellData:(BillModel *)info
+{
+    [super setCellData:info];
+
+    idLabel.text = info.ID;
+    nameLabel.text = info.officialTitle;
+    timeLabel.text = info.introducedOn;
 }
+
+
 
 @end

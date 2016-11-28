@@ -15,9 +15,11 @@
 @property(nonatomic, strong) NSString    *type;
 @property(nonatomic, strong) NSString    *sponsor;
 @property(nonatomic, strong) NSString    *lastActionDate;
-@property(nonatomic, strong) NSString    *pdfUrl;
+@property(nonatomic, strong) NSURL       *pdfUrl;
 @property(nonatomic, strong) NSString    *lastVoteDate;
 @property(nonatomic, strong) NSString    *status;
+@property(nonatomic, strong) NSString    *introducedOn;
 
++ (NSArray*)sortByTime:(NSArray*)array;
 
 @end

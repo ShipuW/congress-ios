@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CommitteeModel.h"
 
-@interface CommitteeDetailViewController : BaseViewController
+@interface CommitteeDetailViewController : BaseDetailViewController
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property(nonatomic, strong) CommitteeModel    *committeeInfo;
 
 @end

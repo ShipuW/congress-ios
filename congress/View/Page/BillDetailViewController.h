@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BillModel.h"
 
-@interface BillDetailViewController : BaseViewController
+@interface BillDetailViewController : BaseDetailViewController
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property(nonatomic, strong) BillModel    *billInfo;
 
 @end
