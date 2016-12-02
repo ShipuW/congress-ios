@@ -21,25 +21,35 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bho-O5-uzI">
-                    <rect key="frame" x="67" y="57" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gyL-N2-a8s">
-                    <rect key="frame" x="16" y="229" width="343" height="418"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gyL-N2-a8s">
+                    <rect key="frame" x="0.0" y="278" width="375" height="389"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="qJX-Dh-Og9"/>
                         <outlet property="delegate" destination="-1" id="zmQ-Ep-23k"/>
                     </connections>
                 </tableView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do e" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bho-O5-uzI">
+                    <rect key="frame" x="67" y="97" width="240" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="2en-0p-ZnS"/>
+                        <constraint firstAttribute="width" constant="240" id="jJL-8a-YBC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gyL-N2-a8s" secondAttribute="trailing" id="BYW-Cz-KTH"/>
+                <constraint firstItem="Bho-O5-uzI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NEe-4Y-UX6"/>
+                <constraint firstItem="gyL-N2-a8s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fIG-u7-ckk"/>
+                <constraint firstItem="gyL-N2-a8s" firstAttribute="top" secondItem="Bho-O5-uzI" secondAttribute="bottom" constant="53" id="g7f-2s-lSW"/>
+                <constraint firstAttribute="bottom" secondItem="gyL-N2-a8s" secondAttribute="bottom" id="uUw-aD-7cc"/>
+                <constraint firstItem="Bho-O5-uzI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="97" id="ucK-iy-NqG"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>

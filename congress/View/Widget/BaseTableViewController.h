@@ -12,9 +12,10 @@
 @interface BaseTableViewController : BaseWidgetController<UISearchBarDelegate>{
     IBOutlet UITableView    *_tableView;
     CGFloat                 _cellHeight;
+    BOOL                    tapFilter;
 }
 @property(strong, nonatomic) NSMutableArray    *filterData;
-
+@property(nonatomic) BOOL       goDetail;
 @property(nonatomic, strong) NSString   *cellIdentifier;
 @property(nonatomic, assign) id         owner;
 @property(strong, nonatomic) NSDictionary *groupedItems;
@@ -22,6 +23,7 @@
 @property(strong, nonatomic) NSArray *indexTitles;
 @property(strong, nonatomic) NSMutableArray *searchData;
 
+- (void)loadPicker;
 
 - (NSDictionary *)generateGroupedDataFromArray:(NSArray *)array;
 

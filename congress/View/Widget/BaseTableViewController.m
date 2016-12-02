@@ -16,17 +16,24 @@
 - (void)viewDidLoad{
     
     [super viewDidLoad];
-    self.listData = [[NSMutableArray alloc] init];
-    self.filterData = [[NSMutableArray alloc] init];
+    self.listData = [NSMutableArray array];
+    self.filterData = [NSMutableArray array];
     self.indexTitles = @[@"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J", @"K", @"L", @"M", @"N", @"O", @"P", @"Q", @"R", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z"];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     if(self.needRefresh && [self.categoryInfo.name isEqualToString:FAVORITE_CATEGORY]){
         self.listData = [[NSMutableArray alloc] init];
         [self reloadData];
     }
+    self.goDetail = NO;
+    tapFilter = NO;
 }
 
 - (void)updateUI
@@ -84,61 +91,6 @@
 {
 }
 
-//*实现更新代理
-//-(void)updateSearchResultsForSearchController:(UISearchController *)searchController
-//{
-//    
-//    NSString *searchText=searchController.searchBar.text;
-//    NSMutableArray *searchResult=[[NSMutableArray alloc]init];
-//    for (BaseModel *p in self.listData) {
-//        NSRange range=[p.ID rangeOfString:searchText];
-//        if (range.length>0) {
-//            [searchResult addObject:p];
-//        }
-//    }
-//    self.listData=searchResult;
-//    
-//    
-//    [_tableView reloadData];
-//}
-
-
-
-//#pragma mark - UISearchResultsUpdating
-//
-////*实现更新代理
-//-(void)updateSearchResultsForSearchController:(UISearchController *)searchController
-//{
-//
-//    NSString *searchText=searchController.searchBar.text;
-//    NSMutableArray *searchResult=[[NSMutableArray alloc]init];
-//    for (BaseModel *p in self.listData) {
-//        NSRange range=[p.ID rangeOfString:searchText];
-//        if (range.length>0) {
-//            [searchResult addObject:p];
-//        }
-//    }
-//    self.listData=searchResult;
-//    
-//
-//    [_tableView reloadData];
-//}
-
-//-(void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope
-//{
-//    NSString *searchText=searchBar.text;
-//    NSMutableArray *searchResult=[[NSMutableArray alloc]init];
-//    for (BaseModel *p in self.listData) {
-//        NSRange range=[p.ID rangeOfString:searchText];
-//        if (range.length>0) {
-//            [searchResult addObject:p];
-//        }
-//    }
-//    self.listData=searchResult;
-//    
-//    
-//    [_tableView reloadData];
-//}
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
 

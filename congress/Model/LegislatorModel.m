@@ -17,18 +17,18 @@
     info.ID             = [dict objectForKey:@"bioguide_id"];
     info.chamber        = [dict objectForKey:@"chamber"];
     info.imageUrl       = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@",ImageUrl, [dict objectForKey:@"bioguide_id"], ImageSuffix]];
-    info.firstName      = [dict objectForKey:@"first_name"];
-    info.lastName       = [dict objectForKey:@"last_name"];
-    info.state          = [dict objectForKey:@"state_name"];
-    info.gender         = [dict objectForKey:@"gender"];
-    info.birthDate      = [dict objectForKey:@"birthday"];
-    info.fax            = [dict objectForKey:@"fax"];
-    info.twitterLink    = ![[dict objectForKey:@"twitter_id"] isKindOfClass:[NSNull class]]?[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TwitterUrl, [dict objectForKey:@"twitter_id"]]]:nil;
-    info.facebookLink   = ![[dict objectForKey:@"facebook_id"] isKindOfClass:[NSNull class]]?[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",FacebookUrl, [dict objectForKey:@"facebook_id"]]]:nil;
+    info.firstName      = [dict objectForKey:@"first_name"]?[dict objectForKey:@"first_name"]:@"N.A";
+    info.lastName       = [dict objectForKey:@"last_name"]?[dict objectForKey:@"last_name"]:@"N.A";
+    info.state          = [dict objectForKey:@"state_name"]?[dict objectForKey:@"state_name"]:@"N.A";
+    info.gender         = [dict objectForKey:@"gender"]?[dict objectForKey:@"gender"]:@"N.A";
+    info.birthDate      = [dict objectForKey:@"birthday"]?[dict objectForKey:@"birthday"]:@"N.A";
+    info.fax            = [dict objectForKey:@"fax"]?[dict objectForKey:@"fax"]:@"N.A";
+    info.twitterLink    = [dict objectForKey:@"twitter_id"]?[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",TwitterUrl, [dict objectForKey:@"twitter_id"]]]:[NSURL URLWithString:DUMMY_URL];
+    info.facebookLink   = [dict objectForKey:@"facebook_id"]?[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",FacebookUrl, [dict objectForKey:@"facebook_id"]]]:[NSURL URLWithString:DUMMY_URL];
     
-    info.websiteLink    = ![[dict objectForKey:@"website"] isKindOfClass:[NSNull class]]?[NSURL URLWithString:[NSString stringWithFormat:@"%@", [dict objectForKey:@"website"]]]:nil;
-    info.office         = [dict objectForKey:@"office"];
-    info.endTerm        = [dict objectForKey:@"term_end"];
+    info.websiteLink    = [dict objectForKey:@"website"]?[NSURL URLWithString:[NSString stringWithFormat:@"%@", [dict objectForKey:@"website"]]]:[NSURL URLWithString:DUMMY_URL];
+    info.office         = [dict objectForKey:@"office"]?[dict objectForKey:@"office"]:@"N.A";
+    info.endTerm        = [dict objectForKey:@"term_end"]?[dict objectForKey:@"term_end"]:@"N.A";
 
     
     return info;
@@ -105,7 +105,13 @@
 }
 
 - (NSComparisonResult)compare:(LegislatorModel *)otherObject {
-    return [self.firstName compare:otherObject.firstName];
+    NSComparisonResult res = NSOrderedSame;
+    res = [[self.state substringToIndex:1] compare:[otherObject.state substringToIndex:1]];
+    if(NSOrderedSame == res) {
+        return [self.firstName compare:otherObject.firstName];
+    }else{
+        return res;
+    }
 }
 
 

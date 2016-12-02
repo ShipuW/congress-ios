@@ -11,6 +11,7 @@
 
 @interface BaseListViewController : BaseViewController{
     NSString *tableIdentifier;
+    UIBarButtonItem* rightButton;
     BaseTableViewController *_tableWidget;
 }
 

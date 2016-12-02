@@ -7,7 +7,11 @@
 //
 
 #import "BaseViewController.h"
+#import "BaseModel.h"
+@interface BaseDetailViewController : BaseViewController{
+    UIBarButtonItem *rightButton;
+        BOOL isLiked;
+}
 
-@interface BaseDetailViewController : BaseViewController
 
 @end

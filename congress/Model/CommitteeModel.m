@@ -16,10 +16,10 @@
     
     info.ID         = [dict objectForKey:@"committee_id"];
     info.chamber    = [dict objectForKey:@"chamber"];
-    info.name       = [dict objectForKey:@"name"];
-    info.parentID   = [dict objectForKey:@"parent_committee_id"];
-    info.office     = [dict objectForKey:@"office"];
-    info.contact    = [dict objectForKey:@"phone"];
+    info.name       = [dict objectForKey:@"name"]?[dict objectForKey:@"name"]:@"N.A";
+    info.parentID   = [dict objectForKey:@"parent_committee_id"]?[dict objectForKey:@"parent_committee_id"]:@"N.A";
+    info.office     = [dict objectForKey:@"office"]?[dict objectForKey:@"office"]:@"N.A";
+    info.contact    = [dict objectForKey:@"phone"]?[dict objectForKey:@"phone"]:@"N.A";
     
     return info;
 }

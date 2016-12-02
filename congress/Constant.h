@@ -74,6 +74,7 @@ selector:_selector name:_name object:nil];
 #define FacebookUrl @"https://www.facebook.com/"
 #define HTTPGET             @"GET"
 #define HTTPPOST            @"POST"
+#define DUMMY_URL           @"dummyUrl"
 #define RequestTimeout    10
 
 #define ImageSuffix @".jpg"
@@ -114,5 +115,11 @@ selector:_selector name:_name object:nil];
 #define BUTTON_CELL_ID       @"ButtonTableViewCell"
 
 #define LINK_BUTTON_SUFFIX  @"LINK"
+
+#define SEARCH_IMAGE    @"searchIcon"
+#define CANCEL_IMAGE    @"cancelIcon"
+
+#define EMPTY_STAR    @"emptyStar"
+#define FILLED_STAR    @"filledStar"
 
 #endif /* Constant_h */

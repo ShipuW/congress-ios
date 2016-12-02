@@ -38,13 +38,15 @@
 
 - (void)reloadData
 {
+    
     // 停止网络请求
     [_operation cancelOp];
     _operation = nil;
     
     // 先清除上次内容
-    [self.listData removeAllObjects];
+    self.listData = [[NSMutableArray alloc]init];
     [super reloadData];
+    [activityIndicatorView startAnimating];
 }
 
 - (void)requestServerOp
@@ -61,8 +63,9 @@
 }
 
 - (void)getLocalData{
+    [activityIndicatorView stopAnimating];
     [self.listData removeAllObjects];
-    [self.filterData removeAllObjects];
+
     NSData *getBillsData = [defaults objectForKey:SAVE_BIL_KEY];
     [self.listData addObjectsFromArray:[NSKeyedUnarchiver unarchiveObjectWithData:getBillsData]];
     self.filterData = self.listData;
@@ -74,9 +77,9 @@
 
 - (void)opSuccess:(NSArray *)data
 {
+    [activityIndicatorView stopAnimating];
     _operation = nil;
     [self.listData removeAllObjects];
-    [self.filterData removeAllObjects];
     [self.listData addObjectsFromArray:data];
     self.filterData = self.listData;
     self.filterData = (NSMutableArray*)[BillModel sortByTime:self.filterData];
@@ -136,6 +139,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    self.goDetail = YES;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     BillDetailViewController *page = [[BillDetailViewController alloc] init];
     page.billInfo = [self.filterData objectAtIndex:indexPath.row];
@@ -145,12 +149,13 @@
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     
-    
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF.officialTitle CONTAINS %@",searchText];
-    self.filterData = (NSMutableArray *)[self.listData filteredArrayUsingPredicate:pred];
-    self.filterData = (NSMutableArray*)[LegislatorModel sortByFirstName:self.filterData];
-    self.groupedItems = [self generateGroupedDataFromArray:self.filterData];
-    self.sectionTitles = [[self.groupedItems allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    if([searchText isEqualToString:@""]){
+        self.filterData = self.listData;
+    }else{
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF.officialTitle CONTAINS %@",searchText];
+        self.filterData = (NSMutableArray *)[self.listData filteredArrayUsingPredicate:pred];
+    }
+    self.filterData = (NSMutableArray*)[BillModel sortByTime:self.filterData];
     [self updateUI];
     self.needRefresh = NO;
 }

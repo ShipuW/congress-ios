@@ -20,36 +20,36 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WvP-lD-3pe">
-                        <rect key="frame" x="8" y="11" width="150" height="21"/>
+                        <rect key="frame" x="8" y="11" width="177" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="150" id="hfZ-dg-J6A"/>
+                            <constraint firstAttribute="width" constant="177" id="lth-A3-Z66"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wa7-cl-lIZ">
-                        <rect key="frame" x="8" y="11" width="359" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wa7-cl-lIZ">
+                        <rect key="frame" x="193" y="11" width="174" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Wa7-cl-lIZ" firstAttribute="top" secondItem="WyC-W7-KWz" secondAttribute="topMargin" constant="3" id="5Di-Gs-dc8"/>
-                    <constraint firstItem="WvP-lD-3pe" firstAttribute="leading" secondItem="WyC-W7-KWz" secondAttribute="leadingMargin" id="AbJ-2f-FOE"/>
-                    <constraint firstItem="Wa7-cl-lIZ" firstAttribute="trailing" secondItem="WyC-W7-KWz" secondAttribute="trailingMargin" id="Kfg-Ey-rCW"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="WvP-lD-3pe" secondAttribute="bottom" constant="3" id="Ovk-aU-eHV"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Wa7-cl-lIZ" secondAttribute="bottom" constant="3" id="R4U-Qt-ny1"/>
-                    <constraint firstItem="WvP-lD-3pe" firstAttribute="top" secondItem="WyC-W7-KWz" secondAttribute="topMargin" constant="3" id="c3Y-YJ-UxU"/>
-                    <constraint firstItem="Wa7-cl-lIZ" firstAttribute="leading" secondItem="WyC-W7-KWz" secondAttribute="leadingMargin" id="hAe-Dr-LuU"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Wa7-cl-lIZ" secondAttribute="bottom" constant="3" id="DQE-QU-5jt"/>
+                    <constraint firstItem="WvP-lD-3pe" firstAttribute="top" secondItem="WyC-W7-KWz" secondAttribute="topMargin" constant="3" id="I4w-oQ-PIE"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="WvP-lD-3pe" secondAttribute="bottom" constant="3" id="NH0-8c-TYX"/>
+                    <constraint firstItem="Wa7-cl-lIZ" firstAttribute="trailing" secondItem="WyC-W7-KWz" secondAttribute="trailingMargin" id="SiN-E6-f9r"/>
+                    <constraint firstItem="Wa7-cl-lIZ" firstAttribute="leading" secondItem="WvP-lD-3pe" secondAttribute="trailing" constant="8" id="iCN-Ee-APA"/>
+                    <constraint firstItem="WvP-lD-3pe" firstAttribute="leading" secondItem="WyC-W7-KWz" secondAttribute="leadingMargin" id="moQ-oc-Dp5"/>
+                    <constraint firstItem="Wa7-cl-lIZ" firstAttribute="top" secondItem="WyC-W7-KWz" secondAttribute="topMargin" constant="3" id="qgD-Lv-gxH"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="titleLabel" destination="WvP-lD-3pe" id="xC5-Fa-guz"/>
                 <outlet property="valueLabel" destination="Wa7-cl-lIZ" id="6iI-fV-4z6"/>
             </connections>
-            <point key="canvasLocation" x="32" y="108"/>
+            <point key="canvasLocation" x="31.5" y="108"/>
         </tableViewCell>
     </objects>
 </document>

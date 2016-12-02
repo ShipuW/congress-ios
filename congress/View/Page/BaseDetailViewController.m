@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNavRightButton];
+//    [self setNavRightButton];
     // Do any additional setup after loading the view.
 }
 
@@ -26,10 +26,6 @@
 }
 
 
-- (void)setNavRightButton{
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"star" style:UIBarButtonItemStylePlain target:self action:@selector(tappedStar)];
-    self.navigationItem.rightBarButtonItem = rightButton;
-}
 
 - (void)tappedStar{
     

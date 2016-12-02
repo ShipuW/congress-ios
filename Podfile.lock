@@ -1,12 +1,15 @@
 PODS:
+  - DGActivityIndicatorView (2.1.1)
   - SlideMenuControllerOC (1.0.1)
 
 DEPENDENCIES:
+  - DGActivityIndicatorView
   - SlideMenuControllerOC
 
 SPEC CHECKSUMS:
+  DGActivityIndicatorView: ff2c76073d79692f724863c8dd38685866a03cb6
   SlideMenuControllerOC: c0527642a48fa16602bb08257c1ffed0e1bd09b7
 
-PODFILE CHECKSUM: 4bd0de76c02c5b04f1de3b82b0083a753e33829b
+PODFILE CHECKSUM: 9bf3e6beebceb769cd6fa3bfa4ffedf90d2b62e1
 
 COCOAPODS: 1.0.1

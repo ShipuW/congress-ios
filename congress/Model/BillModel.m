@@ -18,16 +18,16 @@
     info.chamber        = [dict objectForKey:@"chamber"];
     info.officialTitle  = [dict objectForKey:@"official_title"];
     info.type           = [dict objectForKey:@"bill_type"];
-    info.sponsor        = [NSString stringWithFormat:@"%@%@%@",
+    info.sponsor        = [NSString stringWithFormat:@"%@ %@ %@",
                            [[dict objectForKey:@"sponsor"] objectForKey:@"title"],
                            [[dict objectForKey:@"sponsor"] objectForKey:@"first_name"],
                            [[dict objectForKey:@"sponsor"] objectForKey:@"last_name"]
                            ];
-    info.lastActionDate = [dict objectForKey:@"last_action_at"];
-    info.pdfUrl         = ![[[dict objectForKey:@"urls"] objectForKey:@"pdf"] isKindOfClass:[NSNull class]]?[NSURL URLWithString:[NSString stringWithFormat:@"%@", [[dict objectForKey:@"urls"] objectForKey:@"pdf"]]]:nil;
-    info.lastVoteDate   = [dict objectForKey:@"last_vote_at"];
-    info.status         = [[dict objectForKey:@"history"] objectForKey:@"active"]?@"Active":@"New";
-    info.introducedOn   = [dict objectForKey:@"introduced_on"];
+    info.lastActionDate = [dict objectForKey:@"last_action_at"]?[dict objectForKey:@"last_action_at"]:@"N.A";
+    info.pdfUrl         = [[dict objectForKey:@"urls"] objectForKey:@"pdf"]?[NSURL URLWithString:[NSString stringWithFormat:@"%@", [[dict objectForKey:@"urls"] objectForKey:@"pdf"]]]:[NSURL URLWithString:DUMMY_URL];
+    info.lastVoteDate   = [dict objectForKey:@"last_vote_at"]?[dict objectForKey:@"last_vote_at"]:@"N.A";
+    info.status         = [[[dict objectForKey:@"history"] objectForKey:@"active"] boolValue]?@"Active":@"New";
+    info.introducedOn   = [dict objectForKey:@"introduced_on"]?[dict objectForKey:@"introduced_on"]:@"N.A";
     
     return info;
 }
@@ -38,7 +38,7 @@
     if (![self.type isKindOfClass:[NSNull class]])      res++;
     if (![self.sponsor isKindOfClass:[NSNull class]])         res++;
     if (![self.lastActionDate isKindOfClass:[NSNull class]])        res++;
-    if (![self.pdfUrl isKindOfClass:[NSNull class]])     res++;
+    if (![self.pdfUrl isKindOfClass:[NSNull class]]&&self.pdfUrl != nil)     res++;
     if (![self.chamber isKindOfClass:[NSNull class]])       res++;
     if (![self.lastVoteDate isKindOfClass:[NSNull class]])           res++;
     if (![self.status isKindOfClass:[NSNull class]])   res++;
@@ -63,7 +63,7 @@
         if (index == i)return @{@"Last Action":self.lastActionDate};
         i++;
     }
-    if(![self.pdfUrl isKindOfClass:[NSNull class]]){
+    if(![self.pdfUrl isKindOfClass:[NSNull class]]&&self.pdfUrl != nil){
         if (index == i)return @{@"PDF":self.pdfUrl};
         i++;
     }

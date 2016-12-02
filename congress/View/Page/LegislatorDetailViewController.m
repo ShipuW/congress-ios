@@ -10,6 +10,7 @@
 
 @interface LegislatorDetailViewController ()
 
+
 @end
 
 @implementation LegislatorDetailViewController
@@ -18,7 +19,7 @@
     [super viewDidLoad];
     RegisterNotify(NofifyNewsIcon, @selector(downloadIcon:))
     [self setImage];
-    
+    [self setNavRightButton];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -27,25 +28,66 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)setNavRightButton{
+    NSData *getLegislatorsData = [defaults objectForKey:SAVE_LEG_KEY];
+    NSMutableArray * array = [[NSMutableArray alloc]initWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:getLegislatorsData]];
+    
+    
+    for (LegislatorModel* a in array){
+        if([a.ID isEqualToString: _legislatorInfo.ID]){
+            rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:FILLED_STAR] style:UIBarButtonItemStylePlain target:self action:@selector(tappedStar)];
+            self.navigationItem.rightBarButtonItem = rightButton;
+            isLiked = YES;
+            return;
+        }
+    }
+    rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:EMPTY_STAR] style:UIBarButtonItemStylePlain target:self action:@selector(tappedStar)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    isLiked = NO;
+    
+    
+}
+
+
 - (void)setImage{
     [[ImageDownload download] setNewsIcon:_legislatorInfo imageView:_infoImage];
 }
 
 
 - (void)tappedStar{
-    
-    NSData *getLegislatorsData = [defaults objectForKey:SAVE_LEG_KEY];
-    NSMutableArray * array = [[NSMutableArray alloc]initWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:getLegislatorsData]];
-    
-    for (LegislatorModel* a in array)
-        if(a.ID == _legislatorInfo.ID)
-            return;
-    
-    [array addObject:_legislatorInfo];
-    NSData *saveLegislatorsData = [NSKeyedArchiver archivedDataWithRootObject:array];
-    [defaults setObject:saveLegislatorsData forKey:SAVE_LEG_KEY];
-    [defaults synchronize];
-    SendNotify(AddLegNotice, @{})
+    if(isLiked){
+        isLiked = NO;
+        rightButton.image = [UIImage imageNamed:EMPTY_STAR];
+        NSData *getLegislatorsData = [defaults objectForKey:SAVE_LEG_KEY];
+        NSMutableArray * array = [[NSMutableArray alloc]initWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:getLegislatorsData]];
+        
+        for (LegislatorModel* a in array){
+            if([a.ID isEqualToString: _legislatorInfo.ID]){
+                [array removeObject:a];
+                NSData *saveLegislatorsData = [NSKeyedArchiver archivedDataWithRootObject:array];
+                [defaults setObject:saveLegislatorsData forKey:SAVE_LEG_KEY];
+                [defaults synchronize];
+                return;
+            }
+        }
+        
+        
+    }else{
+        isLiked = YES;
+        rightButton.image = [UIImage imageNamed:FILLED_STAR];
+        NSData *getLegislatorsData = [defaults objectForKey:SAVE_LEG_KEY];
+        NSMutableArray * array = [[NSMutableArray alloc]initWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:getLegislatorsData]];
+        
+        for (LegislatorModel* a in array)
+            if([a.ID isEqualToString: _legislatorInfo.ID])
+                return;
+        
+        [array addObject:_legislatorInfo];
+        NSData *saveLegislatorsData = [NSKeyedArchiver archivedDataWithRootObject:array];
+        [defaults setObject:saveLegislatorsData forKey:SAVE_LEG_KEY];
+        [defaults synchronize];
+        SendNotify(AddLegNotice, @{})
+    }
 }
 
 - (void)dealloc
@@ -108,6 +150,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
 }
+
+
 
 
 @end

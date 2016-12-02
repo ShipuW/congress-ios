@@ -43,9 +43,9 @@
     _operation = nil;
     
     // 先清除上次内容
-    [self.listData removeAllObjects];
-    [self.filterData removeAllObjects];
+    self.listData = [[NSMutableArray alloc]init];
     [super reloadData];
+    [activityIndicatorView startAnimating];
 }
 
 - (void)requestServerOp
@@ -58,8 +58,8 @@
 }
 
 - (void)getLocalData{
+    [activityIndicatorView stopAnimating];
     [self.listData removeAllObjects];
-    [self.filterData removeAllObjects];
     NSData *getCommitteesData = [defaults objectForKey:SAVE_COM_KEY];
     [self.listData addObjectsFromArray:[NSKeyedUnarchiver unarchiveObjectWithData:getCommitteesData]];
     self.filterData = self.listData;
@@ -72,9 +72,9 @@
 
 - (void)opSuccess:(NSArray *)data
 {
+    [activityIndicatorView stopAnimating];
     _operation = nil;
     [self.listData removeAllObjects];
-    [self.filterData removeAllObjects];
     [self.listData addObjectsFromArray:data];
     self.filterData = self.listData;
     self.filterData = (NSMutableArray*)[CommitteeModel sortByName:self.filterData];
@@ -101,7 +101,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 55;
+    return 71;
 }
 
 
@@ -134,6 +134,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    self.goDetail = YES;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     CommitteeDetailViewController *page = [[CommitteeDetailViewController alloc] init];
     page.committeeInfo = [self.filterData objectAtIndex:indexPath.row];
@@ -142,13 +143,13 @@
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-    
-    
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF.name CONTAINS %@",searchText];
-    self.filterData = (NSMutableArray *)[self.listData filteredArrayUsingPredicate:pred];
-    self.filterData = (NSMutableArray*)[LegislatorModel sortByFirstName:self.filterData];
-    self.groupedItems = [self generateGroupedDataFromArray:self.filterData];
-    self.sectionTitles = [[self.groupedItems allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    if([searchText isEqualToString:@""]){
+        self.filterData = self.listData;
+    }else{
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF.name CONTAINS %@",searchText];
+        self.filterData = (NSMutableArray *)[self.listData filteredArrayUsingPredicate:pred];
+    }
+    self.filterData = (NSMutableArray*)[CommitteeModel sortByName:self.filterData];
     [self updateUI];
     self.needRefresh = NO;
 }

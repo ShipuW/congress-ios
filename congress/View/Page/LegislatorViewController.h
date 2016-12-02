@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "LegislatorTableViewController.h"
 
-@interface LegislatorViewController : BaseListViewController
+@interface LegislatorViewController : BaseListViewController{
+    UIPickerView* pickerView;
+}
 
 
 

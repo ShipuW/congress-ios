@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setBillTitle];
+    [self setNavRightButton];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -32,24 +33,63 @@
 
 
 
-- (void)tappedStar{
-    
+
+
+- (void)setNavRightButton{
     NSData *getBillsData = [defaults objectForKey:SAVE_BIL_KEY];
     NSMutableArray * array = [[NSMutableArray alloc]initWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:getBillsData]];
     
-    for (BillModel* a in array)
-        if(a.ID == _billInfo.ID)
+    
+    for (BillModel* a in array){
+        if([a.ID isEqualToString: _billInfo.ID]){
+            rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:FILLED_STAR] style:UIBarButtonItemStylePlain target:self action:@selector(tappedStar)];
+            self.navigationItem.rightBarButtonItem = rightButton;
+            isLiked = YES;
             return;
+        }
+    }
+    rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:EMPTY_STAR] style:UIBarButtonItemStylePlain target:self action:@selector(tappedStar)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    isLiked = NO;
     
-    [array addObject:_billInfo];
-    NSData *saveBillsData = [NSKeyedArchiver archivedDataWithRootObject:array];
-    [defaults setObject:saveBillsData forKey:SAVE_BIL_KEY];
-    [defaults synchronize];
     
-    SendNotify(AddBilNotice, @{})
 }
 
-
+- (void)tappedStar{
+    if(isLiked){
+        isLiked = NO;
+        rightButton.image = [UIImage imageNamed:EMPTY_STAR];
+        NSData *getBillsData = [defaults objectForKey:SAVE_BIL_KEY];
+        NSMutableArray * array = [[NSMutableArray alloc]initWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:getBillsData]];
+        
+        for (BillModel* a in array){
+            if([a.ID isEqualToString: _billInfo.ID]){
+                [array removeObject:a];
+                NSData *saveBillsData = [NSKeyedArchiver archivedDataWithRootObject:array];
+                [defaults setObject:saveBillsData forKey:SAVE_BIL_KEY];
+                [defaults synchronize];
+                return;
+            }
+        }
+        
+        
+    }else{
+        isLiked = YES;
+        rightButton.image = [UIImage imageNamed:FILLED_STAR];
+        NSData *getBillsData = [defaults objectForKey:SAVE_BIL_KEY];
+        NSMutableArray * array = [[NSMutableArray alloc]initWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:getBillsData]];
+        
+        for (BillModel* a in array)
+            if([a.ID isEqualToString: _billInfo.ID])
+                return;
+        
+        [array addObject:_billInfo];
+        NSData *saveBillsData = [NSKeyedArchiver archivedDataWithRootObject:array];
+        [defaults setObject:saveBillsData forKey:SAVE_BIL_KEY];
+        [defaults synchronize];
+        SendNotify(AddBilNotice, @{})
+    }
+}
 
 #pragma UITableViewDegelate
 

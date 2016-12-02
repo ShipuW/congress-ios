@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		07EF88A2F39AC336D20DBB2B /* libPods-congress.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B67B4FACAC558B1C4F70A1C5 /* libPods-congress.a */; };
+		141CC85D1DF0136E00BB569B /* LegFavTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141CC85C1DF0136E00BB569B /* LegFavTableViewController.m */; };
+		141CC8601DF0137E00BB569B /* BilFavTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141CC85F1DF0137E00BB569B /* BilFavTableViewController.m */; };
+		141CC8631DF0138A00BB569B /* ComFavTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 141CC8621DF0138A00BB569B /* ComFavTableViewController.m */; };
 		1439437E1DEA0DB800451A5A /* CommitteeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439437C1DEA0DB800451A5A /* CommitteeDetailViewController.m */; };
 		1439437F1DEA0DB800451A5A /* CommitteeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1439437D1DEA0DB800451A5A /* CommitteeDetailViewController.xib */; };
 		143943921DEA0DD400451A5A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143943811DEA0DD400451A5A /* AboutViewController.m */; };
@@ -56,6 +59,8 @@
 		14BC986F1DE99EC40000AEDB /* BaseWidgetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC986E1DE99EC40000AEDB /* BaseWidgetController.m */; };
 		14BC98751DE9A4AB0000AEDB /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC98741DE9A4AB0000AEDB /* CategoryModel.m */; };
 		14BC98791DE9B6A20000AEDB /* ImageDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BC98781DE9B6A20000AEDB /* ImageDownload.m */; };
+		14DC2BF91DEFAEDF00893200 /* FilterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DC2BF71DEFAEDF00893200 /* FilterTableViewCell.m */; };
+		14DC2BFA1DEFAEDF00893200 /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DC2BF81DEFAEDF00893200 /* FilterTableViewCell.xib */; };
 		6A12AC84EC8F752B530F465D /* libPods-congressUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08DD79A67B0CB9C4BC89D76E /* libPods-congressUITests.a */; };
 		85FB89CD7BB25BC0E7A176BF /* libPods-congressTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D98A7209F950F3C728C6D5 /* libPods-congressTests.a */; };
 /* End PBXBuildFile section */
@@ -79,6 +84,12 @@
 
 /* Begin PBXFileReference section */
 		08DD79A67B0CB9C4BC89D76E /* libPods-congressUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-congressUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		141CC85B1DF0136E00BB569B /* LegFavTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LegFavTableViewController.h; path = congress/View/Page/LegFavTableViewController.h; sourceTree = SOURCE_ROOT; };
+		141CC85C1DF0136E00BB569B /* LegFavTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LegFavTableViewController.m; path = congress/View/Page/LegFavTableViewController.m; sourceTree = SOURCE_ROOT; };
+		141CC85E1DF0137E00BB569B /* BilFavTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BilFavTableViewController.h; path = congress/View/Page/BilFavTableViewController.h; sourceTree = SOURCE_ROOT; };
+		141CC85F1DF0137E00BB569B /* BilFavTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BilFavTableViewController.m; path = congress/View/Page/BilFavTableViewController.m; sourceTree = SOURCE_ROOT; };
+		141CC8611DF0138A00BB569B /* ComFavTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComFavTableViewController.h; path = congress/View/Page/ComFavTableViewController.h; sourceTree = SOURCE_ROOT; };
+		141CC8621DF0138A00BB569B /* ComFavTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComFavTableViewController.m; path = congress/View/Page/ComFavTableViewController.m; sourceTree = SOURCE_ROOT; };
 		1439437B1DEA0DB800451A5A /* CommitteeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitteeDetailViewController.h; sourceTree = "<group>"; };
 		1439437C1DEA0DB800451A5A /* CommitteeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitteeDetailViewController.m; sourceTree = "<group>"; };
 		1439437D1DEA0DB800451A5A /* CommitteeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommitteeDetailViewController.xib; sourceTree = "<group>"; };
@@ -172,6 +183,9 @@
 		14BC98741DE9A4AB0000AEDB /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryModel.m; path = Model/CategoryModel.m; sourceTree = "<group>"; };
 		14BC98771DE9B6A20000AEDB /* ImageDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownload.h; sourceTree = "<group>"; };
 		14BC98781DE9B6A20000AEDB /* ImageDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownload.m; sourceTree = "<group>"; };
+		14DC2BF61DEFAEDF00893200 /* FilterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilterTableViewCell.h; path = congress/View/Cell/FilterTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		14DC2BF71DEFAEDF00893200 /* FilterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilterTableViewCell.m; path = congress/View/Cell/FilterTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		14DC2BF81DEFAEDF00893200 /* FilterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilterTableViewCell.xib; path = congress/View/Cell/FilterTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		22163F3AEF801027886E7207 /* Pods-congressUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-congressUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-congressUITests/Pods-congressUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C4C0061D564EEE2BEE120E2 /* Pods-congress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-congress.debug.xcconfig"; path = "Pods/Target Support Files/Pods-congress/Pods-congress.debug.xcconfig"; sourceTree = "<group>"; };
 		48661CD019ADA27A68EF21A7 /* Pods-congressTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-congressTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-congressTests/Pods-congressTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -274,6 +288,12 @@
 				14BC98631DE99E7C0000AEDB /* CommitteeTableViewController.m */,
 				14BC98641DE99E7C0000AEDB /* LeftMenuTableViewController.h */,
 				14BC98651DE99E7C0000AEDB /* LeftMenuTableViewController.m */,
+				141CC85B1DF0136E00BB569B /* LegFavTableViewController.h */,
+				141CC85C1DF0136E00BB569B /* LegFavTableViewController.m */,
+				141CC85E1DF0137E00BB569B /* BilFavTableViewController.h */,
+				141CC85F1DF0137E00BB569B /* BilFavTableViewController.m */,
+				141CC8611DF0138A00BB569B /* ComFavTableViewController.h */,
+				141CC8621DF0138A00BB569B /* ComFavTableViewController.m */,
 			);
 			name = Widget;
 			path = View/Widget;
@@ -395,6 +415,9 @@
 				143943A11DEA19B300451A5A /* ButtonTableViewCell.h */,
 				143943A21DEA19B300451A5A /* ButtonTableViewCell.m */,
 				143943A31DEA19B300451A5A /* ButtonTableViewCell.xib */,
+				14DC2BF61DEFAEDF00893200 /* FilterTableViewCell.h */,
+				14DC2BF71DEFAEDF00893200 /* FilterTableViewCell.m */,
+				14DC2BF81DEFAEDF00893200 /* FilterTableViewCell.xib */,
 			);
 			name = Cell;
 			path = View/Cell;
@@ -550,6 +573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14B759951DDF972B00F6AA29 /* LaunchScreen.storyboard in Resources */,
+				14DC2BFA1DEFAEDF00893200 /* FilterTableViewCell.xib in Resources */,
 				143943951DEA0DD400451A5A /* BillDetailViewController.xib in Resources */,
 				1439437F1DEA0DB800451A5A /* CommitteeDetailViewController.xib in Resources */,
 				1439439A1DEA0DD400451A5A /* LegislatorDetailViewController.xib in Resources */,
@@ -713,6 +737,9 @@
 				143943AB1DEA36FA00451A5A /* BaseDetailTableViewCell.m in Sources */,
 				143943A81DEA1B0600451A5A /* LabelTableViewCell.m in Sources */,
 				14BC98751DE9A4AB0000AEDB /* CategoryModel.m in Sources */,
+				14DC2BF91DEFAEDF00893200 /* FilterTableViewCell.m in Sources */,
+				141CC85D1DF0136E00BB569B /* LegFavTableViewController.m in Sources */,
+				141CC8631DF0138A00BB569B /* ComFavTableViewController.m in Sources */,
 				143943991DEA0DD400451A5A /* LegislatorDetailViewController.m in Sources */,
 				14BC98261DE99ADE0000AEDB /* GetCommittees.m in Sources */,
 				14BC98231DE99AC80000AEDB /* GetBillls.m in Sources */,
@@ -735,6 +762,7 @@
 				14BC984B1DE99E650000AEDB /* LegislatorTableViewCell.m in Sources */,
 				14BC98791DE9B6A20000AEDB /* ImageDownload.m in Sources */,
 				144D82371DEAF43100E7D89A /* BaseDetailViewController.m in Sources */,
+				141CC8601DF0137E00BB569B /* BilFavTableViewController.m in Sources */,
 				14B7598A1DDF972B00F6AA29 /* AppDelegate.m in Sources */,
 				14BC986C1DE99E7C0000AEDB /* LegislatorTableViewController.m in Sources */,
 				14B759871DDF972B00F6AA29 /* main.m in Sources */,
@@ -814,6 +842,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -862,6 +891,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

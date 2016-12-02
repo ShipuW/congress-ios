@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     defaults = [NSUserDefaults standardUserDefaults];
+    activityIndicatorView = [[DGActivityIndicatorView alloc] initWithType:DGActivityIndicatorAnimationTypeDoubleBounce tintColor:[UIColor redColor] size:100.0f];
+    activityIndicatorView.frame = CGRectMake(self.view.frame.size.width/2 - 50.f, self.view.frame.size.height/2 - 100.f, 100.0f, 100.0f);
+    [self.view addSubview:activityIndicatorView];
     // Do any additional setup after loading the view.
 }
 

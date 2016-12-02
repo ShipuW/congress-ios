@@ -16,8 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setBillTitle];
-
+    [self setCommitteeTitle];
+    [self setNavRightButton];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -26,26 +26,66 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setBillTitle{
+
+
+- (void)setCommitteeTitle{
     _textView.text = _committeeInfo.name;
 }
 
-
-- (void)tappedStar{
-    
+- (void)setNavRightButton{
     NSData *getCommitteesData = [defaults objectForKey:SAVE_COM_KEY];
     NSMutableArray * array = [[NSMutableArray alloc]initWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:getCommitteesData]];
     
-    for (CommitteeModel* a in array)
-        if(a.ID == _committeeInfo.ID)
+    
+    for (CommitteeModel* a in array){
+        if([a.ID isEqualToString: _committeeInfo.ID]){
+            rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:FILLED_STAR] style:UIBarButtonItemStylePlain target:self action:@selector(tappedStar)];
+            self.navigationItem.rightBarButtonItem = rightButton;
+            isLiked = YES;
             return;
+        }
+    }
+    rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:EMPTY_STAR] style:UIBarButtonItemStylePlain target:self action:@selector(tappedStar)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    isLiked = NO;
     
-    [array addObject:_committeeInfo];
-    NSData *saveCommitteesData = [NSKeyedArchiver archivedDataWithRootObject:array];
-    [defaults setObject:saveCommitteesData forKey:SAVE_COM_KEY];
-    [defaults synchronize];
-    SendNotify(AddComNotice, @{})
     
+}
+
+- (void)tappedStar{
+    if(isLiked){
+        isLiked = NO;
+        rightButton.image = [UIImage imageNamed:EMPTY_STAR];
+        NSData *getCommitteesData = [defaults objectForKey:SAVE_COM_KEY];
+        NSMutableArray * array = [[NSMutableArray alloc]initWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:getCommitteesData]];
+        
+        for (CommitteeModel* a in array){
+            if([a.ID isEqualToString: _committeeInfo.ID]){
+                [array removeObject:a];
+                NSData *saveCommitteesData = [NSKeyedArchiver archivedDataWithRootObject:array];
+                [defaults setObject:saveCommitteesData forKey:SAVE_COM_KEY];
+                [defaults synchronize];
+                return;
+            }
+        }
+        
+        
+    }else{
+        isLiked = YES;
+        rightButton.image = [UIImage imageNamed:FILLED_STAR];
+        NSData *getCommitteesData = [defaults objectForKey:SAVE_COM_KEY];
+        NSMutableArray * array = [[NSMutableArray alloc]initWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:getCommitteesData]];
+        
+        for (CommitteeModel* a in array)
+            if([a.ID isEqualToString: _committeeInfo.ID])
+                return;
+        
+        [array addObject:_committeeInfo];
+        NSData *saveCommitteesData = [NSKeyedArchiver archivedDataWithRootObject:array];
+        [defaults setObject:saveCommitteesData forKey:SAVE_COM_KEY];
+        [defaults synchronize];
+        SendNotify(AddComNotice, @{})
+    }
 }
 
 #pragma UITableViewDegelate

@@ -8,7 +8,8 @@ target 'congress' do
   # Pods for congress
 
 pod 'SlideMenuControllerOC'
-  
+pod 'DGActivityIndicatorView'
+
   target 'congressTests' do
     inherit! :search_paths
     # Pods for testing

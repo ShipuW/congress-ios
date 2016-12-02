@@ -16,7 +16,17 @@
     for (NSString *key in self.displayDictionary) {
         self.titleLabel.text = key;
         if([[self.displayDictionary objectForKey:key] isKindOfClass:[NSURL class]]){
-            [_urlButton setTitle:[NSString stringWithFormat:@"%@ %@",key, LINK_BUTTON_SUFFIX]  forState:UIControlStateNormal];
+            for (NSString *key in self.displayDictionary){
+                NSURL *a = [self.displayDictionary objectForKey:key];
+                if([a.absoluteString isEqualToString:DUMMY_URL]){
+                    [_urlButton setTitle:@"N.A"  forState:UIControlStateNormal];
+                    [_urlButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+                }
+                else{
+                    [_urlButton setTitle:[NSString stringWithFormat:@"%@ %@",key, LINK_BUTTON_SUFFIX]  forState:UIControlStateNormal];
+                }
+            }
+
             [_urlButton addTarget:self action:@selector(buttonPressed) forControlEvents:UIControlEventTouchUpInside];
         }
     }
@@ -24,7 +34,9 @@
 
 - (void)buttonPressed{
     for (NSString *key in self.displayDictionary){
-        [[UIApplication sharedApplication]openURL:[self.displayDictionary objectForKey:key] options:@{} completionHandler:nil];
+        NSURL *a = [self.displayDictionary objectForKey:key];
+        if(![a.absoluteString isEqualToString:DUMMY_URL])
+            [[UIApplication sharedApplication]openURL:[self.displayDictionary objectForKey:key] options:@{} completionHandler:nil];
     }
 }
 

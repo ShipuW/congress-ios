@@ -18,7 +18,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{
+                                                        NSFontAttributeName:[UIFont systemFontOfSize:20.0f]
+                                                        } forState:UIControlStateNormal];
+    [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];
+    
+    [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0, -13)];
     // Override point for customization after application launch.
+    [[UINavigationBar appearance] setBackgroundColor:[UIColor whiteColor]];
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     
 
@@ -26,26 +34,26 @@
     
     
     LegislatorViewController* legislatorViewControllerState = [storyboard instantiateViewControllerWithIdentifier:@"LegislatorViewController"];
-    legislatorViewControllerState.title = STATE_TAB_NAME;
-    legislatorViewControllerState.navigationItem.title = STATE_TAB_NAME;
+    legislatorViewControllerState.title = @"State";
+    legislatorViewControllerState.navigationItem.title = @"State";
     legislatorViewControllerState.categoryInfo = [CategoryModel infoFromDict:@{@"name":@""}];
     UINavigationController *legNavigationControllerState = [[UINavigationController alloc] initWithRootViewController:legislatorViewControllerState];
     
     LegislatorViewController* legislatorViewControllerHouse = [storyboard instantiateViewControllerWithIdentifier:@"LegislatorViewController"];
-    legislatorViewControllerHouse.title = HOUSE_TAB_NAME;
-    legislatorViewControllerHouse.navigationItem.title = HOUSE_TAB_NAME;
+    legislatorViewControllerHouse.title = @"House";
+    legislatorViewControllerHouse.navigationItem.title = @"House";
     legislatorViewControllerHouse.categoryInfo = [CategoryModel infoFromDict:@{@"name":HOUSE_TAB_NAME}];
     UINavigationController *legNavigationControllerHouse = [[UINavigationController alloc] initWithRootViewController:legislatorViewControllerHouse];
     
     LegislatorViewController* legislatorViewControllerSenate = [storyboard instantiateViewControllerWithIdentifier:@"LegislatorViewController"];
-    legislatorViewControllerSenate.title = SENATE_TAB_NAME;
-    legislatorViewControllerHouse.navigationItem.title = HOUSE_TAB_NAME;
+    legislatorViewControllerSenate.title = @"Senate";
+    legislatorViewControllerHouse.navigationItem.title = @"Senate";
     legislatorViewControllerSenate.categoryInfo = [CategoryModel infoFromDict:@{@"name":SENATE_TAB_NAME}];
     UINavigationController *legNavigationControllerSenate = [[UINavigationController alloc] initWithRootViewController:legislatorViewControllerSenate];
     
     UITabBarController *legislatorTabBarController = [[UITabBarController alloc]init];
     legislatorTabBarController.viewControllers = [NSArray arrayWithObjects:legNavigationControllerState, legNavigationControllerHouse, legNavigationControllerSenate, nil];
-    
+    [legislatorTabBarController.tabBar setBackgroundColor:[UIColor whiteColor]];
     
     LeftMenuTableViewController* leftMenuTableViewController = [storyboard instantiateViewControllerWithIdentifier:@"LeftMenuTableViewController"];
     SlideMenuController *slideMenuController = [[SlideMenuController alloc] initWithMainViewController:legislatorTabBarController leftMenuViewController:leftMenuTableViewController];

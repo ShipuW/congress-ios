@@ -11,6 +11,7 @@
 @interface BaseController : UIViewController <BaseOperationDelegate> {
     BaseOperation     *_operation;
     NSUserDefaults    *defaults;
+    DGActivityIndicatorView *activityIndicatorView;
 }
 
 @end

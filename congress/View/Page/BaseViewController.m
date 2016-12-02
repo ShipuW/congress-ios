@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNavigationBarLeftButton];
+    
     
     // Do any additional setup after loading the view.
 }
@@ -26,9 +26,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setNavigationBarLeftButton{
-     [self addLeftBarButtonWithImage:[UIImage imageNamed:@"leftNaviIcon"]];
-}
 
 
 
